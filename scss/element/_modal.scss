@@ -1,0 +1,61 @@
+
+/*---------------------------
+--------- 28. Modal ---------
+---------------------------*/
+
+.modal {
+	z-index: 1201;
+	
+	.modal-content {
+		border-radius: 0px;
+	}
+	
+	&.modal-center {
+		
+		.modal-dialog {
+			position: absolute;
+			@include positioning($left: 50%, $top: 45%);
+			@include transform(translateX(-50%) translateY(-50%));
+			margin: 0px;
+			
+			@include screen-tablet {
+				@include positioning($left: 50%, $top: 0%);
+				@include transform(translateX(-50%) translateY(0%));
+				margin: 40px 0px;
+			}
+		}
+	}
+	
+	
+}
+
+@include screen-mobile-above {
+	.modal-sm {
+		width: 500px;
+	}
+	
+	.modal-md {
+		width: 700px;
+	}
+	
+	.modal-lg {
+		width: 900px;
+	}
+}
+
+@include screen-mobile {
+	.modal-sm,
+	.modal-md,
+	.modal-lg {
+		width: 90%;
+	}
+}
+
+.modal-backdrop {
+	z-index: 1200;
+}
+
+.modal-close {
+	position: absolute;
+	@include positioning($top: -10px, $right: -10px);
+}

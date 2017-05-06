@@ -1,0 +1,73 @@
+
+/*-----------------------------
+--------- 36. General ---------
+-----------------------------*/
+
+.blog-slider {
+	
+	.tab-head {	
+		font-family: $font-family-rc;
+		font-size: 21px;
+		color: $default-white;
+	}
+	
+	.tab-sub {	
+		font-family: $font-family-ptsans;
+		color: $default-light-gray;
+	}
+	
+	.tp-tab,
+	.tp-thumb {
+		opacity: 0.7;
+		
+		&:hover,
+		&.selected{
+			opacity: 1;
+		}
+	}	
+}
+
+.blog-sidebar {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	
+	&.sidebar-right {
+		padding-left: 15%;
+		border-left: 1px solid $default-light-gray;
+	}
+	
+	&.sidebar-left {
+		padding-right: 15%;
+		border-right: 1px solid $default-light-gray;	
+	}
+	
+	.widget {
+		margin-bottom: 40px;
+	}
+	
+	.widget-link.dotted {
+		
+		ul {
+			li 
+			{
+			
+				a {
+					letter-spacing: 0.5px;
+					font-size: 14px;
+					@include transition(all 0.4s ease-in-out);
+					
+					&:before {
+						content: "\e12b";
+						font-family: "exclusive-icon";
+						margin-right: 15px;
+						font-size: 10px;
+					}
+					
+					&:hover {							
+						color: $default-dark;
+					}
+				}
+			}
+		}
+	}	
+}

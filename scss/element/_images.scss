@@ -1,0 +1,31 @@
+
+/*----------------------------
+--------- 15. Images ---------
+----------------------------*/
+
+.img-style-1 {
+	position: relative;
+	margin-bottom: 30px;
+	
+	
+	img {
+		position: relative;
+	}
+	
+	&:before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;	
+		@include positioning($right: -25px, $bottom: -25px);			
+		z-index: 0;
+	}
+	
+	&.left:before {
+		left: -25px;
+	}
+}
+
+.img-style-2 {
+	@include box-shadow( 0px, 5px, 15px, 5px, rgba(0, 0, 0, 0.1));
+}

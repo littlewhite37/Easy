@@ -1,0 +1,24 @@
+module.exports = function(grunt) {
+	grunt.initConfig({
+		pkg: grunt.file.readJSON('package.json'),
+		sass: {
+			dist: {
+				files: {
+					'css/main.css' : 'scss/global.scss',
+					'css/colors/blue.css' : 'scss/theme-colors/blue.scss',
+					'css/colors/salmon.css' : 'scss/theme-colors/salmon.scss',
+					'css/colors/gold.css' : 'scss/theme-colors/gold.scss'
+				}
+			}
+		},
+		watch: {
+			css: {
+				files: '**/*.scss',
+				tasks: ['sass']
+			}
+		}
+	});
+	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.registerTask('default',['watch']);
+}

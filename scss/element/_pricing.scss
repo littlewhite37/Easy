@@ -1,0 +1,161 @@
+
+/*-----------------------------
+--------- 22. Pricing ---------
+-----------------------------*/
+
+.pricing-1 {
+	position: relative;
+	text-align: center;
+	padding: 40px;
+	margin-top: 30px;
+	background-color: $default-white;
+	@include box-shadow( 1px, 1px, 26px, 0px, rgba(0, 0, 0, 0.1));
+	border: 1px solid $default-light-gray;	
+	
+	&.recommended {
+		
+		margin-top: 0px;
+		padding-bottom: 70px;
+	}
+	
+	.pricing-status {
+		i {
+			font-size: 45px;
+		}
+		
+		.plan {
+			margin-top: 20px;
+			margin-bottom: 10px;
+			letter-spacing: 0.5px;
+		}
+	}
+	
+	.pricing-content {
+		
+		li {
+			color: $default-gray;
+			margin-bottom: 15px;
+		}
+		
+		.price {
+			font-size: 45px;
+			padding-right: 5px;
+			font-weight: bold;
+		}		
+	}
+	
+}
+
+
+.pricing-2 {
+	position: relative;
+	
+	&.column-2 {
+		.pricing-table {
+			width: 50%;
+		}
+	}
+	
+	&.column-3 {
+		.pricing-table {
+			width: 33.33333333%;
+		}
+	}
+	
+	&.column-4 {
+		.pricing-table {
+			width: 25%;
+		}
+	}
+	
+	&.column-5 {
+		.pricing-table {
+			width: 20%;
+		}
+	}
+	
+	@include screen-mobile {
+		&.column-2,
+		&.column-3,
+		&.column-4,
+		&.column-4 {
+			.pricing-table {
+				width: 100%;
+			}
+		}
+	}
+	
+	&:before,
+	&:after {
+		display: table;
+		content: " ";
+	}
+		
+	&:after {
+		clear: both;
+	}
+	
+	.pricing-table {
+		border: 1px solid $default-light-gray;
+		background-color: $default-white;
+		float: left;
+		text-align: center;
+		position: relative;
+		
+		@include screen-mobile {
+			margin-bottom: 30px;
+		}
+
+		.pricing-info {
+			padding: 30px;
+		
+			.pricing-status {
+				i {
+					font-size: 45px;
+					margin-top: 30px;
+					border: 3px solid;
+					border-radius: 50%;
+					padding: 25px;
+				}
+				
+				.plan {
+					margin: 40px 0px;
+					letter-spacing: 0.5px;
+					display: block;
+					padding-bottom: 15px;
+				}
+			}
+			
+			.pricing-content {
+				
+				li {
+					margin-bottom: 10px;
+					font-weight: bold;
+				}
+				
+				.price {
+					font-size: 45px;
+					padding-right: 5px;
+					font-weight: bold;
+				}		
+			}
+		}
+		
+		.pricing-footer {
+			.btn {
+				padding: 15px;
+			}
+		}
+		
+		&.recommended {
+			@include box-shadow( 1px, 1px, 26px, 0px, rgba(0, 0, 0, 0.1));
+			margin-left: -1px;
+			margin-right: -1px;
+			top: -10px;
+			
+			.pricing-footer {
+				margin-top: 20px;
+			}
+		}
+	}
+}

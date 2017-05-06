@@ -1,0 +1,76 @@
+
+/*----------------------------
+--------- 21. Client ---------
+----------------------------*/
+
+.client-1 {
+	position: relative;
+	
+	&.column-2 {
+		.client {
+			width: 50%;
+		}
+	}
+	
+	&.column-3 {
+		.client {
+			width: 33.33333333%;
+		}
+	}
+	
+	&.column-4 {
+		.client {
+			width: 25%;
+		}
+	}
+	
+	&.column-5 {
+		.client {
+			width: 20%;
+		}
+	}
+	
+	@include screen-mobile {
+		
+		&.column-2,
+		&.column-3,
+		&.column-4,
+		&.column-5 {
+			.client {
+				width: 50%;
+				
+				&.border {
+					border: 0px !important;
+				}
+			}
+		}
+	}
+	
+	&:before,
+	&:after {
+		display: table;
+		content: " ";
+	}
+		
+	&:after {
+		clear: both;
+	}
+	
+	
+	.client {
+		display: block;
+		float: left;
+		padding: 50px 0px;
+		opacity: 0.5;
+		@include transition(all 0.4s ease-in-out);
+		
+		img {
+			margin-right: auto;
+			margin-left: auto;
+		}
+		
+		&:hover {
+			opacity: 1;
+		}
+	}
+}

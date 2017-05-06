@@ -1,0 +1,72 @@
+
+/*------------------------------
+--------- 31. Timeline ---------
+------------------------------*/
+
+.timeline {
+	
+	ul {
+	
+		li {
+			position: relative;
+			overflow: hidden;
+			margin: 0;
+			
+			.milestone {
+				width: 200px;
+				float: left;
+				margin-top: 22px;
+				text-align: right;
+				padding-right: 35px;
+				color: $default-dark;
+				font-size: 16px;
+				font-weight: bold;
+				
+				@include screen-tablet {
+					text-align: left;
+				}
+			}
+			
+			.timeline-content {
+				width: 75%;
+				float: left;
+				padding-left: 40px;
+				padding-bottom: 30px;
+				position: relative;
+				
+				@include screen-tablet {
+					width: 90%;
+				}
+				
+				&:before {
+					content: '';
+					position: absolute;
+					height: 100%;
+					width: 3px;
+					background-color: $default-light-gray;
+					@include positioning($top: 0px, $left: 0px);
+					
+					@include screen-tablet {
+						left: 11px;
+					}
+				}
+				
+				&:after {
+					content: '';
+					width: 25px;
+					height: 25px;
+					background: $default-white;
+					position: absolute;
+					@include positioning($top: 22px, $left: -15px);
+					@include transition(all 0.3s ease);
+					border-radius: 100%;
+					border: 3px solid $default-dark;
+					
+					@include screen-tablet {
+						left: 0;
+					}
+				}
+			}
+		}
+	}
+}

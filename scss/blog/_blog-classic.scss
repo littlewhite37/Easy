@@ -1,0 +1,58 @@
+
+/*----------------------------------
+--------- 41. Blog Classic ---------
+----------------------------------*/
+
+.blog-classic {
+	position: relative;
+	
+	.blog-item {
+		margin: 0px 30px 30px 30px;
+		padding-bottom: 30px;
+		border-bottom: 1px solid $default-light-gray;
+		
+		.blog-media {
+			
+			.blog-video {
+				
+				iframe {
+					width: 100%;
+					min-height: 380px;
+				}
+			}
+		}
+		
+		.blog-content {
+			
+			.blog-tittle {
+				margin-top: 30px;
+			}
+			
+			.blog-meta {
+				color: $default-gray;
+			}
+			
+			.blog-article {
+				margin-top: 30px;
+			}
+			
+			.blog-action {
+				float: left;
+				font-weight: bold;
+				margin-top: 30px;
+				
+				.comments,
+				.likes {
+					margin-right: 15px;
+				}	
+			}
+			
+			.continue-reading {
+				float: right;
+				text-decoration: underline;
+				font-weight: normal;
+				margin-top: 30px;
+			}
+		}
+	}
+}

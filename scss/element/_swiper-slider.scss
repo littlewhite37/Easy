@@ -1,0 +1,295 @@
+
+/*-----------------------------------
+--------- 18. Swiper Slider ---------
+-----------------------------------*/
+
+.swiper-container {
+	padding: 15px;
+}
+
+.swiper-single {
+	&.swiper-container {
+		padding: 0px;
+	}
+}
+
+.swiper-pagination-bullet {
+	width: 8px;
+    height: 8px;
+	margin: 0px 10px;
+	position: relative;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 0px 10px;
+}
+
+.swiper-wrapper {
+	margin-bottom: 15px;
+}
+
+.pagination-wrapper {
+	position: relative;
+	display: block;
+	
+	&:before,
+	&:after {
+		display: table;
+		content: " ";
+	}
+	
+	&:after {
+	    clear: both;
+	}
+}
+
+.swiper-pagination,
+.swiper-pagination-hero,
+.swiper-pagination-2,
+.swiper-pagination-3,
+.swiper-pagination-4,
+.swiper-pagination-5 {
+	width: 100%;
+	position: relative;
+    text-align: center;
+	
+	.swiper-pagination-bullet {
+		@include transition(all 0.2s ease);
+		margin: 0px 10px
+	}
+	
+	.swiper-pagination-bullet-active {
+		background: $default-dark;
+	}
+	
+	&.swiper-bullet-1 {
+		
+		.swiper-pagination-bullet:after {
+			content: "";
+			position: absolute;
+			background-color: transparent;
+			height: 0px;
+			width: 0px;
+			@include positioning($top: 2.5px, $left: 2.5px);
+			border: 2px solid $default-dark;
+			border-radius: 50px;
+			@include transition(all 0.2s ease);
+		}
+		
+		.swiper-pagination-bullet-active:after {
+			height: 16px;
+			width: 16px;
+			@include positioning($top: -4px, $left: -4px);
+		}
+		
+		&.bullet-white {
+		
+			.swiper-pagination-bullet {
+				background-color: $default-white;
+				opacity: 0.5;
+			}
+			
+			.swiper-pagination-bullet:after {
+				border: 1px solid $default-white;
+			}
+			
+			.swiper-pagination-bullet-active {
+				background: $default-white;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.swiper-navigation {
+	@include screen-tablet {
+		display: none;
+		
+		&.show-nav-mobile {
+			display: block;
+		}
+	} 
+	
+	.swiper-button-next,
+	.swiper-button-prev,
+	.swiper-hero-button-next,
+	.swiper-hero-button-prev,
+	.swiper-button-next-2,
+	.swiper-button-prev-2,
+	.swiper-button-next-3,
+	.swiper-button-prev-3,
+	.swiper-button-next-4,
+	.swiper-button-prev-4,
+	.swiper-button-next-5,
+	.swiper-button-prev-5 {
+		background-image: none;
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		font-size: 18px;
+		text-align:center;
+		z-index: 1;
+		line-height: 0px;
+		@include transform(translateY(-50%));
+	}
+	
+	.swiper-button-next,
+	.swiper-hero-button-next,
+	.swiper-button-next-2,
+	.swiper-button-next-3,
+	.swiper-button-next-4,
+	.swiper-button-next-5 {
+		right: 0px;
+	}
+	
+	
+	.swiper-button-prev,
+	.swiper-hero-button-prev,
+	.swiper-button-prev-2,
+	.swiper-button-prev-3,
+	.swiper-button-prev-4,
+	.swiper-button-prev-5 {
+		left: 0px;
+	}
+	
+	&.navigation-1 {
+	
+		.swiper-button-next,
+		.swiper-button-prev,
+		.swiper-hero-button-next,
+		.swiper-hero-button-prev,
+		.swiper-button-next-2,
+		.swiper-button-prev-2,
+		.swiper-button-next-3,
+		.swiper-button-prev-3,
+		.swiper-button-next-4,
+		.swiper-button-prev-4,
+		.swiper-button-next-5,
+		.swiper-button-prev-5 {
+			font-size: 18px;
+			width: auto;
+			height: auto;
+			background-color: $default-white;
+			
+			i {
+				padding: 10px 20px;
+			}
+			
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+		
+	}
+	
+	&.navigation-2 {
+		
+		.swiper-button-next,
+		.swiper-button-prev,
+		.swiper-hero-button-next,
+		.swiper-hero-button-prev,
+		.swiper-button-next-2,
+		.swiper-button-prev-2,
+		.swiper-button-next-3,
+		.swiper-button-prev-3,
+		.swiper-button-next-4,
+		.swiper-button-prev-4,
+		.swiper-button-next-5,
+		.swiper-button-prev-5 {
+			font-size: 18px;
+			width: auto;
+			height: auto;
+			background-color: $default-dark;
+			color: $default-white;
+			
+			i {
+				padding: 15px;
+			}
+			
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+		
+	}
+	
+	&.navigation-4 {
+		
+		.swiper-button-next,
+		.swiper-button-prev,
+		.swiper-hero-button-next,
+		.swiper-hero-button-prev,
+		.swiper-button-next-2,
+		.swiper-button-prev-2,
+		.swiper-button-next-3,
+		.swiper-button-prev-3,
+		.swiper-button-next-4,
+		.swiper-button-prev-4,
+		.swiper-button-next-5,
+		.swiper-button-prev-5 {
+			font-size: 18px;
+			width: auto;
+			height: auto;
+			background-color: $default-dark;
+			color: $default-white;
+			
+			i {
+				padding: 15px;
+			}
+			
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+		
+	}
+	
+	&.out-of-box {
+		
+		.swiper-button-next,
+		.swiper-hero-button-next,
+		.swiper-button-next-2,
+		.swiper-button-next-3,
+		.swiper-button-next-4,
+		.swiper-button-next-5  {
+			right: -15px;
+			
+			@include screen-mobile {
+				right: 0px;
+			}
+		}
+		
+		.swiper-button-prev,
+		.swiper-hero-button-prev,
+		.swiper-button-prev-2,
+		.swiper-button-prev-3,
+		.swiper-button-prev-4,
+		.swiper-button-prev-5  {
+			left: -15px;
+			
+			@include screen-mobile {
+				left: 0px;
+			}
+		}
+	}
+}
+
+.gallery-screen {
+	.swiper-slide {
+		cursor: e-resize;
+		cursor: -webkit-grab;
+	}
+}
+
+.gallery-thumbs {
+	.swiper-slide {
+        width: 25%;
+        opacity: 0.4;	
+		cursor: e-resize;
+		cursor: -webkit-grab;
+    }
+	
+	.swiper-slide-active {
+        opacity: 1;
+    }
+}

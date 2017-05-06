@@ -1,0 +1,52 @@
+
+/*----------------------------------
+--------- 26. Progress Bar ---------
+----------------------------------*/
+
+.progress-wrapper {
+		
+	.progress-bar-label {
+		margin-bottom: 5px;
+		
+		.percent {
+			float:right;
+		}
+	}
+	
+	.progress {
+		background-color: $default-deep-white;
+		position: relative;
+		    box-shadow: none;
+		
+		.progress-bar {
+			background-color: $default-info;
+			position: relative;
+			
+			.percent {
+				font-size: 14px;
+				position: absolute;
+				right: 10px;
+			}
+		}
+		
+		&.progress-dark {
+			
+			.progress-bar {
+				background-color: $default-dark;
+			}
+		}
+		
+		&.thin {
+			height: 5px;
+		}
+		
+		&.medium {
+			height: 10px;
+		}
+		
+		&.fat {
+			height: 20px;
+		}
+	}
+}
+

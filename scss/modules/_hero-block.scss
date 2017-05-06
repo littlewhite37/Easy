@@ -1,0 +1,236 @@
+
+/*--------------------------------
+--------- 7. Hero Blocks ---------
+--------------------------------*/
+
+.fs-hero {
+	height: 100vh;
+	position: relative;
+	
+	&.hero-slider {
+		
+		.swiper-container {
+			height: 100vh;
+			padding: 0px;
+			
+			.swiper-slide {
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+			}
+			
+			&:hover {
+				.swiper-navigation {
+				
+					.swiper-hero-button-next,
+					.swiper-hero-button-prev {
+						opacity: 1;
+					}
+				}
+			}
+			
+			.swiper-navigation {
+				color: $default-white;
+				
+				.swiper-hero-button-next,
+				.swiper-hero-button-prev {
+					font-size: 18px;
+					@include transition(all 0.4s ease);
+					opacity: 0;
+					background-color: $default-dark;
+					
+					&:hover {
+						opacity: 0.7;
+					}
+				}
+				
+				.swiper-hero-button-next {
+					right: 0px;
+				}
+				
+				.swiper-hero-button-prev {
+					left: 0px;
+				}
+			}
+			
+			.swiper-hero-pagination {
+				position: absolute;
+				text-align: center;
+				@include transition(all 0.4s ease);
+				z-index: 1;
+				
+				@include screen-tablet-above {
+					opacity: 0;
+				} 
+				
+				.swiper-pagination-bullet {
+					opacity: 1;
+					background-color: transparent;
+					width: 12px;
+					height: 12px;
+					border: 2px solid $default-white;
+					
+					&.swiper-pagination-bullet-active {
+						background-color: $default-white;
+					}
+				}
+			}
+			
+			@include screen-tablet-above {
+				&:hover {
+					.swiper-hero-pagination {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
+
+.hero-img {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+
+
+.hero-caption {
+	position: absolute !important;
+	min-width: 550px;
+	
+	@include screen-mobile {
+		min-width: 300px;
+		max-width: 350px;
+	} 
+	
+	h1 {
+        font-size: 60px;
+		
+		@include screen-mobile {
+			font-size: 35px;
+		} 
+	}
+	
+	h2 {
+        font-size: 50px;
+		
+		@include screen-mobile {
+			font-size: 35px;
+		} 
+	}
+	
+	h3 {
+        font-size: 40px;
+		
+		@include screen-mobile {
+			font-size: 25px;
+		} 
+	}
+	
+	h4 {
+        font-size: 30px;
+		
+		@include screen-mobile {
+			font-size: 20px;
+		} 
+	}
+	
+	h5 {
+        font-size: 20px;
+	}
+	
+	p {
+		max-width: 550px;
+		
+		@include screen-mobile {
+			max-width: 300px;
+			font-size: 14px;
+		} 
+	}
+	
+	&.center-right {
+		@include positioning($top: 45%, $right: 0);
+		@include transform(translateX(-30%) translateZ(1px) translateY(-45%));
+		
+		@include screen-tablet {
+			@include transform(translateX(-5%) translateZ(1px) translateY(-45%));
+		}
+		
+		@include screen-mobile {
+			@include positioning($top: 45%, $left: 0);
+			@include transform(translateX(10%) translateZ(1px) translateY(-45%));
+		}
+	}
+	
+	&.center-left {
+		@include positioning($top: 45%, $left: 0);
+		@include transform(translateX(50%) translateZ(1px) translateY(-45%));
+		
+		@include screen-tablet {
+			@include transform(translateX(10%) translateZ(1px) translateY(-45%));
+		}
+	}
+	
+	&.center {
+		text-align: center;
+		@include positioning($top: 45%, $left: 50%);
+		@include transform(translateX(-50%) translateZ(1px) translateY(-45%));
+	}
+	
+	&.btm-right {
+		@include positioning($right: 0, $bottom: 15%);
+		@include transform(translateX(-30%) translateZ(1px) translateY(-50%));
+		
+		@include screen-mobile {
+			@include positioning($top: 45%, $left: 0);
+			@include transform(translateX(10%) translateZ(1px) translateY(-45%));
+		}
+		
+		&.exact-btm {
+			@include positioning($bottom: 5% , $top: auto);
+			@include transform(translateX(-50%) translateZ(1px) translateY(0%));
+			
+			@include screen-mobile {
+				@include positioning($bottom: 5% , $top: auto, $left: 50%);
+				@include transform(translateX(-50%) translateZ(1px) translateY(0%));
+			}
+		}
+	}
+	
+	&.btm-left {
+		@include positioning($left: 0, $bottom: 15%);
+		@include transform(translateX(50%) translateZ(1px) translateY(-50%));
+		
+		@include screen-mobile {
+			@include positioning($top: 45%, $left: 0);
+			@include transform(translateX(10%) translateZ(1px) translateY(-45%));
+		}
+		
+		&.exact-btm {
+			@include positioning($bottom: 5% , $top: auto);
+			@include transform(translateX(50%) translateY(0%));
+			
+			@include screen-mobile {
+				@include positioning($bottom: 5% , $top: auto, $left: 50%);
+				@include transform(translateX(-50%) translateZ(1px) translateY(0%));
+			}
+		}
+	}
+	
+	&.btm-center {
+		@include positioning($left: 50%, $bottom: 15%);
+		@include transform(translateX(-50%) translateY(-50%));
+		
+		&.exact-btm {
+			@include positioning($bottom: 5% , $top: auto);
+			@include transform(translateX(-50%) translateY(0%));
+			
+			@include screen-mobile {
+				@include positioning($bottom: 5% , $top: auto, $left: 50%);
+				@include transform(translateX(-50%) translateZ(1px) translateY(0%));
+			}
+		}
+	}
+	
+}

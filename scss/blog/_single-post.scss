@@ -1,0 +1,56 @@
+
+/*--------------------------------------
+--------- 42. Blog Single Post ---------
+--------------------------------------*/
+
+.single-post-cover {
+	position: relative;
+	background-color: $default-light-gray;
+	width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+	
+	&.post-cover-sm {
+		padding: 50px 0;
+	}
+	
+	&.post-cover-md {
+		padding: 80px 0;
+	}
+	
+	&.post-cover-lg {
+		padding: 120px 0;
+	}
+	
+	&.post-cover-xl {
+		padding: 250px 0;
+	}
+	
+	.blog-tittle {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	
+	.blog-meta {
+		text-align: center;
+		color: $default-light-gray;
+		
+		.author{
+			font-weight: bold;
+			color: $default-light-gray;
+		}
+	}
+}
+
+.single-post {
+	
+	.blog-action {
+		margin-top: 50px;
+		
+		.comments,
+		.likes {
+			margin-right: 30px;
+		}
+	}
+}

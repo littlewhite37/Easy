@@ -1,0 +1,77 @@
+
+/*-------------------------------
+--------- 27. Accordion ---------
+-------------------------------*/
+
+.panel {
+	&.panel-default {
+		border-color: $default-light-gray;
+		box-shadow: none;
+		
+		>.panel-heading {
+			background-color: transparent;
+			padding: 0px;
+			
+			+.panel-collapse {
+				>.panel-body {
+					border-top-color: transparent;
+				}
+			}
+			
+		}
+	}
+	
+	.panel-title {
+		display: block;
+		
+		>a  {
+			display: block;
+			color: $default-dark;
+			letter-spacing: 0.5px;
+			padding: 20px;
+			position: relative;
+			
+			&:after {
+				position: absolute;
+				content: "\e199";
+				font-family: "exclusive-icon" ;
+				right: 20px;
+				font-size: 10px;
+				padding: 3px 4.5px;
+				border-radius: 50px;
+				background-color: $default-dark;
+				color: $default-white;
+			}
+			
+			&.collapsed {
+				&:after {
+					content: "\e19b";
+				}
+			}
+		}
+	}
+	
+	.panel-body {
+		padding: 20px;
+	}
+}
+
+.panel-group {
+	.panel {
+		border-radius: 2px;
+	}
+	
+	.panel-heading {
+		padding: 0;
+		
+		+.panel-collapse {
+		
+			>.panel-body {
+				border-color: $default-light-gray;
+			}
+		}
+		
+	}
+	
+	
+}

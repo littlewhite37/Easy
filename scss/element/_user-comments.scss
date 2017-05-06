@@ -1,0 +1,80 @@
+
+/*-----------------------------
+--------- 30. Comment ---------
+-----------------------------*/
+
+.user-comments {
+
+	.comments-item {
+		position: relative;
+		margin-bottom: 50px;
+		padding-bottom: 30px;
+		border-bottom: 1px solid $default-light-gray;
+		
+		
+		.user {
+			
+			.profile-img {
+				height: 50px;
+				width: 50px;
+				border-radius: 50px;
+				float: left;
+			}
+			
+			.user-info {
+				padding-left: 15px;
+			
+				.user-name {
+					font-weight: bold;
+					display: block;
+					font-size: 17px;
+				}
+				
+				.date {
+					color: $default-gray;
+					font-size: 14px;
+				}
+			}
+			
+		}
+		
+		.comment {
+			margin-top: 30px;
+		}
+		
+		.action {
+			margin-top: 30px;
+				
+			span {
+				margin-right: 30px;
+			}
+		}
+		
+		&.replied {
+			border-bottom: 0;
+			padding-bottom: 0;
+			margin-top: 50px;
+			margin-bottom:0;
+			padding-left: 10%;
+			
+			/*&:before {
+				content: "";
+				position: absolute;
+				width: 5%;
+				height: 1px;
+				background-color: $default-light-gray;
+				@include positioning($top: 50%, $left: 10px);
+			}
+			
+			&:after {
+				content: "";
+				position: absolute;
+				width: 1px;
+				height: 50%;
+				background-color: $default-light-gray;
+				@include positioning($top: 0px, $left: 10px);
+			}*/
+		}
+		
+	}
+}

@@ -1,0 +1,160 @@
+
+/*-----------------------------
+--------- 10. Isotope ---------
+-----------------------------*/
+
+.isotope {
+	&.no-fillter {
+		.folio-item,
+		.blog-item	{
+			float: left
+		}
+	}
+	
+	&.gutter-sm {
+		.folio-item,
+		.blog-item {
+			padding: 10px;
+			
+			@include screen-tablet {
+				padding: 10px
+			}
+		}
+	}
+	
+	&.gutter {
+		.folio-item,
+		.blog-item {
+			padding: 15px;
+			
+			@include screen-tablet {
+				padding: 15px 10px;
+			}
+		}
+	}
+	
+	&.gutter-lg {
+		.folio-item,
+		.blog-item {
+			padding: 20px;
+			
+			@include screen-tablet {
+				padding: 20px 10px;
+			}
+		}
+	}
+	
+	&.col-1 {
+		.folio-item,
+		.blog-item {
+			width: 100%;
+		}
+	}
+	
+	&.col-2 {
+		.folio-item,
+		.blog-item {
+			width: 49.99%;
+			
+			@include screen-tablet {
+				width: 50%;
+			}
+			
+			@include screen-mobile {
+				width: 100%;
+			}
+		}
+	}
+	
+	&.col-3 {
+		.folio-item,
+		.blog-item {
+			width: 33.3333333%;
+			
+			@include screen-tablet {
+				width: 50%;
+			}
+			
+			@include screen-mobile {
+				width: 100%;
+			}
+		}
+	}
+	
+	&.col-4 {
+		.folio-item,
+		.blog-item {
+			width: 24.98%;
+			
+			@include screen-tablet {
+				width: 50%;
+			}
+			
+			@include screen-mobile {
+				width: 100%;
+			}
+		}
+	}
+	
+	&.col-5 {
+		.folio-item,
+		.blog-item {
+			width: 19.99%;
+			
+			@include screen-tablet {
+				width: 50%;
+			}
+			
+			@include screen-mobile {
+				width: 100%;
+			}
+		}
+	}
+	
+	&.col-1,
+	&.col-2,
+	&.col-3,
+	&.col-4,
+	&.col-5 {
+		.folio-item,
+		.blog-item {
+			float: left
+		}
+	}
+}	
+
+.isotope-filter {
+	
+	&.filter-1 {
+		
+		.filter-item {
+			position: relative;
+			font-size: 16px;
+			font-weight: bold;
+			padding: 5px 25px;
+			line-height: 3;
+			color: $default-gray;
+			@include transition(all 0.3s ease-in-out);
+			
+			&:after {
+				content: "";
+				position: absolute;
+				@include positioning($top: 0px, $right:0px);
+				@include transform(rotate(30deg));
+				background-color: lighten($default-gray, 30%);
+				height: 100%;
+				width: 1px;			
+			}
+			
+			&:last-child:after {
+				width: 0px;
+			}
+			
+			&.active,
+			&:hover,
+			&:focus {
+				color: $default-dark;
+			}
+		}
+	}
+}

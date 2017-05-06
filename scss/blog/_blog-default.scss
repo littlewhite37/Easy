@@ -1,0 +1,81 @@
+
+/*----------------------------------
+--------- 37. Blog Default ---------
+----------------------------------*/
+
+.blog-default {
+	position: relative;
+	
+	.blog-item {
+		margin-bottom: 80px;
+		
+		.blog-tittle {
+			letter-spacing: 0.5px;
+		}
+		
+		.blog-content {
+			padding: 30px;
+			
+			.blog-meta {
+				position: relative;
+				margin-top: 30px;
+				font-size: 15px;
+				color: $default-gray;
+				
+				@include screen-tablet-above {
+					padding-left: 30px;
+					
+					&:after {
+						content:"";
+						position: absolute;
+						height: 1px;
+						width: 120px;
+						@include positioning($top: 50%, $left: -120px);
+						z-index: 1;
+					}
+				}
+			}
+			
+			&.left {
+			    .blog-meta {
+					padding-left: 0px;
+					
+					&:after {
+					    @include positioning($left: auto, $right: -120px);
+					}
+				}
+			}
+		}
+		
+		.author,
+		.date{
+			font-weight: bold;
+		}
+		
+		.date {
+			padding-left: 5px;
+		}
+		
+		.continue-reading {
+			margin-top: 30px;
+			text-align: right;
+			font-size: 20px;
+			
+			a {
+				border: 2px solid #333743;
+				padding: 7px 8px 1px 8px;
+				@include transition(all 0.4s ease);
+				
+				&:hover {
+				    background-color: $default-dark;
+					color: $default-white;
+
+				} 
+			}
+		}
+		
+		.blog-article {
+			margin-top: 30px;
+		}
+	}
+}

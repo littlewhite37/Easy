@@ -1,0 +1,183 @@
+
+/*-------------------------------
+--------- 39. Blog Card ---------
+-------------------------------*/
+
+.blog-card {
+	position: relative;
+	
+	.blog-item {
+		@include screen-tablet { 
+			margin-bottom: 30px;
+		}
+		
+		.blog-wrapper {
+			background-color: $default-white;
+			overflow: hidden;
+			position: relative;
+			@include box-shadow( 0px, 2px, 10px, .5px, rgba(0, 0, 0, 0.1));
+			@include transition(all 0.2s ease);
+			
+			&:hover {
+				@include box-shadow( 0px, 10px, 20px, 0px, rgba(0, 0, 0, 0.1));
+				@include transform(translateY(-15px));
+			}
+	
+			.blog-content {
+				padding: 20px 25px 30px 25px;
+				position: relative;
+				
+				
+				.blog-tittle {
+					font-size: 26px;
+					margin-top: 15px;
+					margin-bottom: 5px;				
+					
+					a {
+						font-family: $font-family-rc;				
+						letter-spacing: 0.5px;	
+						@include transition(all 0.4s ease-in-out);
+					}
+				}
+				
+				.blank-content-sm {
+					min-height: 30px;
+				}
+					
+				.blank-content-md {
+					min-height: 70px;
+				}
+					
+				.blank-content-lg {
+					min-height: 150px;
+				}
+				
+				.blog-meta {
+					color: $default-gray;
+					font-size: 14px;
+					
+					a {
+						@include transition(all 0.2s ease);
+					}
+				}
+				
+				.blog-meta-alt {
+					padding: 10px 0px;
+					font-size: 14px;
+					color: $default-gray;
+					
+					.author-img {
+						height: 50px;
+						width: 50px;
+						border-radius: 50px;
+						float: left;
+					}
+					
+					.meta-info {
+						padding-left: 15px;
+						padding-top: 3px;
+						
+						.author {
+							font-weight: bold;
+							font-size: 17px;
+						}
+					}
+				}
+				
+				.blog-article {
+					margin-top: 20px
+				}
+				
+				.blog-action {
+					margin-top: 30px;
+					
+					.likes,
+					.comments,
+					.share {
+						padding-top: 7.5px;
+						padding-right: 15px;
+						
+						a {
+							color: $default-gray;
+						}
+					}
+					
+					.continue-reading {
+						border: 1px solid $default-deep-gray;
+						padding: 5px 10px;
+						border-radius: 4px;
+						color: $default-gray;
+						float: right;
+						@include transition(all 0.4s ease-in-out);
+						
+						&:hover,
+						&:focus {
+							color: $default-white;
+						}
+					}	
+				}	
+			}
+			
+			&.bg-media {
+			
+				.blog-content {
+				
+					.blog-tittle a {
+						color: $default-white;
+						line-height: 1.5;
+					}
+					
+					.blog-meta {
+						color: $default-light-gray;
+						
+						.author {
+							color: $default-white !important;
+						}
+					}
+					
+					.blog-meta-alt {
+					
+						padding: 10px 0px;
+
+						.meta-info {
+							span {
+								color: $default-white;
+							}
+						}
+					}
+					
+					.blog-article {
+						color: $default-light-gray;
+					}
+					
+					.blog-action { 
+						.likes a,
+						.comments a,
+						.share a{
+							color: $default-white;
+							
+							&:hover,
+							&:focus {
+								color: $default-white;
+								opacity: 0.6
+							}
+						}
+						
+						.continue-reading {
+							border: 1px solid $default-white;
+							color: $default-white;
+							
+							&:hover,
+							&:focus {
+								background-color: $default-white;
+								color: $default-dark;
+								border-color: $default-white;
+							}
+						}
+					}
+				
+				}				
+			}
+		}
+	}
+}

@@ -1,0 +1,239 @@
+/*================================
+===========  General  ============
+================================*/
+a:hover, a:focus {
+  color: #2e71f0; }
+
+.theme-color {
+  color: #2e71f0; }
+
+.theme-color-bg {
+  background-color: #2e71f0; }
+
+/*================================
+===========  Section  ============
+================================*/
+.theme-overlay:before {
+  background-color: #2e71f0; }
+
+/*================================
+===========  Headers  ============
+================================*/
+.header .navbar-collapse ul.navbar-nav > li:hover > a, .header .navbar-collapse ul.navbar-nav > li:focus > a, .header .navbar-collapse ul.navbar-nav > li.active > a {
+  color: #2e71f0; }
+.header.header-sticky.sticky .navbar-collapse ul.navbar-nav > li:hover > a, .header.header-sticky.sticky .navbar-collapse ul.navbar-nav > li:focus > a, .header.header-sticky.sticky .navbar-collapse ul.navbar-nav > li.active > a {
+  color: #2e71f0; }
+.header.header-full-screen .fs-nav .fs-nav-item:hover a .fs-nav .fs-nav-item:hover a {
+  background-color: #2e71f0; }
+.header .cart-menu .check-out {
+  background-color: #2e71f0; }
+.header .cart-menu a.check-out:hover {
+  background-color: #2e71f0; }
+
+/*===================================
+===========  Page Title  ============
+===================================*/
+.breadcrumb li a:hover {
+  color: #2e71f0; }
+
+.dark-overlay .breadcrumb li a:hover {
+  color: #2e71f0; }
+
+/*================================
+===========  Loaders  ============
+================================*/
+.loader-wrapper .loader-1:before {
+  border-color: #2e71f0; }
+.loader-wrapper .loader-2 {
+  border-top-color: #2e71f0; }
+
+/*================================
+===========  Buttons  ============
+================================*/
+.btn-theme {
+  background-color: #2e71f0;
+  border-color: #2e71f0; }
+  .btn-theme:hover, .btn-theme:focus {
+    background-color: lighten #2e71f0, 20%; }
+
+.btn-theme-inverse {
+  color: #2e71f0;
+  border-color: #2e71f0; }
+  .btn-theme-inverse:hover, .btn-theme-inverse:focus {
+    background-color: #2e71f0; }
+
+.btn-white:hover, .btn-white:focus,
+.btn-gray:hover,
+.btn-gray:focus {
+  background-color: #2e71f0; }
+
+.btn-white-inverse:hover, .btn-white-inverse:focus {
+  background-color: #2e71f0;
+  border: 2px solid #2e71f0 !important; }
+
+/*================================
+===========  Heading  ============
+================================*/
+.heading-1:after {
+  border-color: #2e71f0; }
+
+/*===============================
+===========  Images  ============
+================================*/
+.img-style-1:before {
+  background-color: #e5f1ff; }
+
+/*========================================
+===========  Features Blocks  ============
+========================================*/
+.features-block-1:hover i {
+  color: #2e71f0; }
+
+.features-block-3:hover i {
+  color: #2e71f0; }
+
+.features-block-5:hover i {
+  color: #2e71f0; }
+
+/*============================
+===========  Tab  ============
+============================*/
+.tab-style-1 li.active .a {
+  color: #2e71f0; }
+.tab-style-1 li.active > a:after {
+  background-color: #2e71f0; }
+.tab-style-1 li a:hover, .tab-style-1 li a:focus {
+  color: #2e71f0; }
+  .tab-style-1 li a:hover:after, .tab-style-1 li a:focus:after {
+    background-color: #2e71f0; }
+
+.tab-style-3.theme-style li {
+  background-color: #2e71f0; }
+  .tab-style-3.theme-style li.active > a {
+    background-color: #5e91f3; }
+  .tab-style-3.theme-style li a:hover, .tab-style-3.theme-style li a:focus {
+    background-color: #4681f2; }
+
+/*lighten 10% */
+.tab-style-3.theme-style li.active > a {
+  background-color: #5e91f3; }
+
+/* lighten 5% */
+.tab-style-3.theme-style li a:hover,
+.tab-style-3.theme-style li a:focus {
+  background-color: #4681f2; }
+
+.tab-style-4 li.active > a {
+  color: #2e71f0; }
+  .tab-style-4 li.active > a:hover, .tab-style-4 li.active > a:focus {
+    color: #2e71f0; }
+  .tab-style-4 li.active > a:after {
+    background-color: #2e71f0; }
+.tab-style-4 li a:hover, .tab-style-4 li a:focus {
+  color: #2e71f0; }
+  .tab-style-4 li a:hover:after, .tab-style-4 li a:focus:after {
+    background-color: #2e71f0; }
+
+/*==============================
+===========  Team   ============
+==============================*/
+.team-4 ul.team-tab li a:before {
+  background-color: #2e71f0; }
+
+/*=================================
+===========  Pricing   ============
+=================================*/
+.pricing-2 .pricing-table.recommended .pricing-footer .btn {
+  background-color: #2e71f0; }
+
+/*=====================================
+===========  Progess Bar   ============
+=====================================*/
+.progress-wrapper .progress.progress-theme .progress-bar {
+  background-color: #2e71f0; }
+
+/*==================================
+===========  Timeline   ============
+==================================*/
+.timeline ul li:hover
+.timeline ul li.active .timeline-content:before {
+  border-color: #2e71f0; }
+
+/*=============================
+===========  Form  ============
+=============================*/
+input.material-input.theme-color:focus,
+textarea.material-input.theme-color:focus {
+  border-color: #2e71f0; }
+
+.radio.theme-color input[type="radio"]:checked + label:before {
+  border-color: #2e71f0; }
+.radio.theme-color input[type="radio"] + label:after {
+  background-color: #2e71f0; }
+
+.checkbox.theme-color input[type="checkbox"]:checked + label:after {
+  background-color: #2e71f0; }
+
+/*=======================================
+===========  Swiper Slider   ============
+=======================================*/
+.swiper-bullet-1.theme-bullet .swiper-pagination-bullet-active:after {
+  border-color: #2e71f0; }
+
+.theme-bullet .swiper-pagination-bullet-active {
+  background-color: #2e71f0; }
+
+/*===============================
+===========  Widget  ============
+===============================*/
+.widget-news .news-item .news-info .author {
+  color: #5699a9; }
+
+.widget-tags.theme-color ul li a:hover {
+  background-color: #2e71f0; }
+
+/*=====================================
+===========  Blog Default  ============
+=====================================*/
+.blog-default .blog-item .author {
+  color: #2e71f0; }
+.blog-default .blog-item .blog-meta:after {
+  background-color: #2e71f0; }
+
+/*==================================
+===========  Blog grid  ============
+==================================*/
+.blog-grid .blog-item .author {
+  color: #2e71f0; }
+
+/*=====================================
+===========  Blog Classic  ============
+=====================================*/
+.blog-classic .blog-item .blog-content .blog-action a:hover {
+  color: #2e71f0; }
+.blog-classic .blog-item .blog-content .continue-reading:hover {
+  color: #2e71f0; }
+
+/*==================================
+===========  Blog Card  ============
+==================================*/
+.blog-card .blog-item .blog-wrapper .blog-content .blog-action .likes a:hover,
+.blog-card .blog-item .blog-wrapper .blog-content .blog-action .comments a:hover,
+.blog-card .blog-item .blog-wrapper .blog-content .blog-action .share a:hover {
+  color: #2e71f0; }
+.blog-card .blog-item .blog-wrapper .blog-content .blog-action .continue-reading:hover, .blog-card .blog-item .blog-wrapper .blog-content .blog-action .continue-reading:focus {
+  border-color: #2e71f0;
+  background-color: #2e71f0; }
+.blog-card .blog-item .blog-wrapper .blog-content .blog-meta .author,
+.blog-card .blog-item .blog-wrapper .blog-content .blog-meta-alt .author {
+  color: #2e71f0; }
+.blog-card .blog-item .blog-wrapper.theme-color-bg {
+  background-color: #2e71f0; }
+
+/*=========================================
+===========  Blog Single Post  ============
+=========================================*/
+.single-post-cover .blog-meta .author:hover {
+  color: #2e71f0; }
+
+/*# sourceMappingURL=blue.css.map */

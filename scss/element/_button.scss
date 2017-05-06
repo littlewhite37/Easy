@@ -1,0 +1,1591 @@
+
+/*----------------------------
+--------- 13. Button ---------
+----------------------------*/
+
+.btn {
+	font-family: $font-family-rc;
+	text-align: center;
+	border-radius: 0px;
+	margin-bottom: 10px;
+	@include transition(all 0.4s ease-in-out);
+	
+	&.btn-sm {
+		padding: 5px 15px;
+		font-size: 14px;
+	}
+	
+	&.btn-md {
+		padding: 7px 25px;
+		font-size: 16px;
+	}
+	
+	&.btn-lg {
+		padding: 8px 40px;
+		font-size: 18px;
+	}
+	
+	&.btn-block {
+		padding: 10px 15px;
+		font-size: 16px;
+		letter-spacing: 1px;
+		width: 100%;
+	}
+	
+	&.icon-btn-sm {
+		padding: 6px;
+	}
+	
+	&.icon-btn-md {
+		padding: 10px;
+	}
+	
+	&.icon-btn-lg {
+		padding: 25px;
+	}
+	
+}
+
+.btn-white {	
+	background-color: $default-white;
+	color: $default-dark;
+	@include box-shadow( 1px, 1px, 20px, 1px, rgba(0,0,0,0.08));
+	
+	&:hover,
+	&:focus	{
+		color: $default-white;
+	}
+}
+
+.btn-white-inverse {
+	border: 2px solid $default-white;
+	background-color: transparent;
+	color: $default-white;
+	
+	&:hover,
+	&:focus	{
+		border: 2px solid $default-white;
+		background-color: $default-white;
+		color: $default-white;
+	}
+}
+
+.btn-gray {	
+	background-color: $default-gray;
+	color: $default-white;
+	
+	&:hover,
+	&:focus	{
+		color: $default-white;
+	}
+}
+
+.btn-dark {
+	background-color: $default-dark;
+	color: $default-white;
+	
+	&:hover,
+	&:focus	{
+		background-color: $default-light-dark;
+		color: $default-white;
+	}
+}
+
+.btn-dark-inverse {
+	border: 2px solid $default-dark;
+	color: $default-dark;
+	background-color: transparent;
+	
+	&:hover,
+	&:focus	{
+		background-color: $default-dark;
+		color: $default-white;
+	}
+}
+
+.btn-theme {
+	color: $default-white;
+	border: 2px solid;
+	
+	&:hover,
+	&:focus	{
+		color: $default-white;
+	}
+}
+
+.btn-theme-inverse {
+	border: 2px solid;
+	
+	&:hover,
+	&:focus	{
+		color: $default-white !important;
+	}
+}
+
+.play-btn  {
+	font-size: 40px;
+	font-style: normal;
+	
+	&:before {
+	   content: "\e125";
+	   font-family: "exclusive-icon";
+	}
+}
+
+.icon-btn-round {
+	border-radius: 50%
+}
+
+.social-btn {
+	
+	li {
+		display: inline-block;
+		margin-right: 10px;
+		
+		a {
+			@include transition(all 0.4s ease-in-out);
+			line-height: 0;
+		}
+	}
+}
+
+.text-facebook {
+	color: $facebook;
+}
+
+.text-twitter {
+	color: $twitter;
+}
+
+.text-instagram {
+	color: $instagram;
+}
+
+.text-google-plus {
+	color: $google-plus;
+}
+
+.text-pinterest {
+	color: $pinterest;
+}
+
+.text-skype {
+	color: $skype;
+}
+
+.text-linkedin {
+	color: $linkedin;
+}
+
+.text-youtube {
+	color: $youtube;
+}
+
+.text-yahoo {
+	color: $yahoo;
+}
+
+.text-rss {
+	color: $rss;
+}
+
+.text-dropbox {
+	color: $dropbox;
+}
+
+.text-sound-cloud {
+	color: $sound-cloud;
+}
+
+.text-vimeo {
+	color: $vimeo;
+}
+
+.text-behance {
+	color: $behance;
+}
+
+.text-bing {
+	color: $bing;
+}
+
+.text-dribble {
+	color: $dribble;
+}
+
+.text-html5 {
+	color: $html5;
+}
+
+.text-sharethis {
+	color: $sharethis;
+}
+
+.text-tumblr {
+	color: $tumblr;
+}
+
+.text-wordpress {
+	color: $wordpress;
+}
+
+.hover-facebook {
+	color: $facebook;
+	
+	&:hover,
+	&:focus {
+		color: $default-white;
+		background-color: $facebook;
+	}
+	
+	&.btn-white-inverse {
+		color: $default-white;
+		border-color: $default-white;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $facebook;
+		}
+	}
+	
+	&.btn-dark-inverse {
+		color: $default-dark;
+		border-color: $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $facebook;
+		}
+	}
+	
+	&.btn-dark {
+		color: $default-white;
+		border: 2px solid $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $facebook;
+			background-color: $facebook;
+		}
+	}
+	
+	&.btn-white {
+		background-color: $default-white;
+		color: $default-dark;
+		border: 1px solid transparent;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $facebook;
+			background-color: $facebook;
+		}
+	}
+}
+
+.hover-twitter {
+	color: $twitter;
+	
+	&:hover,
+	&:focus {
+		color: $default-white;
+		background-color: $twitter;
+	}
+	
+	&.btn-white-inverse {
+		color: $default-white;
+		border-color: $default-white;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $twitter;
+		}
+	}
+	
+	&.btn-dark-inverse {
+		color: $default-dark;
+		border-color: $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $twitter;
+		}
+	}
+	
+	&.btn-dark {
+		color: $default-white;
+		border: 2px solid $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $twitter;
+			background-color: $twitter;
+		}
+	}
+	
+	&.btn-white {
+		background-color: $default-white;
+		color: $default-dark;
+		border: 1px solid transparent;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $twitter;
+			background-color: $twitter;
+		}
+	}
+	
+}
+
+.hover-instagram {	
+	color: $instagram;
+	
+	&:hover,
+	&:focus {
+		color: $default-white;
+		background-color: $instagram;
+	}
+	
+	&.btn-white-inverse {
+		color: $default-white;
+		border-color: $default-white;
+		
+		&:hover,
+		&:focus {
+			color: $default-dark;
+			border-color: $instagram;
+		}
+	}
+	
+	&.btn-dark-inverse {
+		color: $default-dark;
+		border-color: $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $instagram;
+		}
+	}
+	
+	&.btn-dark {
+		color: $default-white;
+		border: 2px solid $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $instagram;
+			background-color: $instagram;
+		}
+	}
+	
+	&.btn-white {
+		background-color: $default-white;
+		color: $default-dark;
+		border: 1px solid transparent;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $instagram;
+			background-color: $instagram;
+		}
+	}
+}
+
+.hover-google-plus {	
+	color: $google-plus;
+	
+	&:hover,
+	&:focus {
+		color: $default-white;
+		background-color: $google-plus;
+	}
+	
+	&.btn-white-inverse {
+		color: $default-white;
+		border-color: $default-white;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $google-plus;
+		}
+	}
+	
+	&.btn-dark-inverse {
+		color: $default-dark;
+		border-color: $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $google-plus;
+		}
+	}
+	
+	&.btn-dark {
+		color: $default-white;
+		border: 2px solid $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $google-plus;
+			background-color: $google-plus;
+		}
+	}
+	
+	&.btn-white {
+		background-color: $default-white;
+		color: $default-dark;
+		border: 1px solid transparent;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $google-plus;
+			background-color: $google-plus;
+		}
+	}
+}
+
+.hover-pinterest {	
+	color: $pinterest;
+	
+	&:hover,
+	&:focus {
+		color: $default-white;
+		background-color: $pinterest;
+	}
+	
+	&.btn-white-inverse {
+		color: $default-white;
+		border-color: $default-white;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $pinterest;
+		}
+	}
+	
+	&.btn-dark-inverse {
+		color: $default-dark;
+		border-color: $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $pinterest;
+		}
+	}
+	
+	&.btn-dark {
+		color: $default-white;
+		border: 2px solid $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $pinterest;
+			background-color: $pinterest;
+		}
+	}
+	
+	&.btn-white {
+		background-color: $default-white;
+		color: $default-dark;
+		border: 1px solid transparent;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $pinterest;
+			background-color: $pinterest;
+		}
+	}
+}
+
+.hover-skype {	
+	color: $skype;
+	
+	&:hover,
+	&:focus {
+		color: $default-white;
+		background-color: $skype;
+	}
+	
+	&.btn-white-inverse {
+		color: $default-white;
+		border-color: $default-white;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $skype;
+		}
+	}
+	
+	&.btn-dark-inverse {
+		color: $default-dark;
+		border-color: $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $skype;
+		}
+	}
+	
+	&.btn-dark {
+		color: $default-white;
+		border: 2px solid $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $skype;
+			background-color: $skype;
+		}
+	}
+	
+	&.btn-white {
+		background-color: $default-white;
+		color: $default-dark;
+		border: 1px solid transparent;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $skype;
+			background-color: $skype;
+		}
+	}
+}
+
+.hover-linkedin {	
+	color: $linkedin;
+	
+	&:hover,
+	&:focus {
+		color: $default-white;
+		background-color: $linkedin;
+	}
+	
+	&.btn-white-inverse {
+		color: $default-white;
+		border-color: $default-white;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $linkedin;
+		}
+	}
+	
+	&.btn-dark-inverse {
+		color: $default-dark;
+		border-color: $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $linkedin;
+		}
+	}
+	
+	&.btn-dark {
+		color: $default-white;
+		border: 2px solid $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $linkedin;
+			background-color: $linkedin;
+		}
+	}
+	
+	&.btn-white {
+		background-color: $default-white;
+		color: $default-dark;
+		border: 1px solid transparent;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $linkedin;
+			background-color: $linkedin;
+		}
+	}
+}
+
+.hover-youtube {	
+	color: $youtube;
+	
+	&:hover,
+	&:focus {
+		color: $default-white;
+		background-color: $youtube;
+	}
+	
+	&.btn-white-inverse {
+		color: $default-white;
+		border-color: $default-white;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $youtube;
+		}
+	}
+	
+	&.btn-dark-inverse {
+		color: $default-dark;
+		border-color: $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $youtube;
+		}
+	}
+	
+	&.btn-dark {
+		color: $default-white;
+		border: 2px solid $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $youtube;
+			background-color: $youtube;
+		}
+	}
+	
+	&.btn-white {
+		background-color: $default-white;
+		color: $default-dark;
+		border: 1px solid transparent;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $youtube;
+			background-color: $youtube;
+		}
+	}
+}
+
+.hover-yahoo {	
+	color: $yahoo;
+	
+	&:hover,
+	&:focus {
+		color: $default-white;
+		background-color: $yahoo;
+	}
+	
+	&.btn-white-inverse {
+		color: $default-white;
+		border-color: $default-white;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $yahoo;
+		}
+	}
+	
+	&.btn-dark-inverse {
+		color: $default-dark;
+		border-color: $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $yahoo;
+		}
+	}
+	
+	&.btn-dark {
+		color: $default-white;
+		border: 2px solid $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $yahoo;
+			background-color: $yahoo;
+		}
+	}
+	
+	&.btn-white {
+		background-color: $default-white;
+		color: $default-dark;
+		border: 1px solid transparent;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $yahoo;
+			background-color: $yahoo;
+		}
+	}
+}
+
+.hover-rss {	
+	color: $rss;
+	
+	&:hover,
+	&:focus {
+		color: $default-white;
+		background-color: $rss;
+	}
+	
+	&.btn-white-inverse {
+		color: $default-white;
+		border-color: $default-white;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $rss;
+		}
+	}
+	
+	&.btn-dark-inverse {
+		color: $default-dark;
+		border-color: $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $rss;
+		}
+	}
+	
+	&.btn-dark {
+		color: $default-white;
+		border: 2px solid $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $rss;
+			background-color: $rss;
+		}
+	}
+	
+	&.btn-white {
+		background-color: $default-white;
+		color: $default-dark;
+		border: 1px solid transparent;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $rss;
+			background-color: $rss;
+		}
+	}
+}
+
+.hover-dropbox {	
+	color: $dropbox;
+	
+	&:hover,
+	&:focus {
+		color: $default-white;
+		background-color: $dropbox;
+	}
+	
+	&.btn-white-inverse {
+		color: $default-white;
+		border-color: $default-white;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $dropbox;
+		}
+	}
+	
+	&.btn-dark-inverse {
+		color: $default-dark;
+		border-color: $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $dropbox;
+		}
+	}
+	
+	&.btn-dark {
+		color: $default-white;
+		border: 2px solid $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $dropbox;
+			background-color: $dropbox;
+		}
+	}
+	
+	&.btn-white {
+		background-color: $default-white;
+		color: $default-dark;
+		border: 1px solid transparent;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $dropbox;
+			background-color: $dropbox;
+		}
+	}
+}
+
+.hover-sound-cloud {	
+	color: $sound-cloud;
+	
+	&:hover,
+	&:focus {
+		color: $default-white;
+		background-color: $sound-cloud;
+	}
+	
+	&.btn-white-inverse {
+		color: $default-white;
+		border-color: $default-white;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $sound-cloud;
+		}
+	}
+	
+	&.btn-dark-inverse {
+		color: $default-dark;
+		border-color: $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $sound-cloud;
+		}
+	}
+	
+	&.btn-dark {
+		color: $default-white;
+		border: 2px solid $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $sound-cloud;
+			background-color: $sound-cloud;
+		}
+	}
+	
+	&.btn-white {
+		background-color: $default-white;
+		color: $default-dark;
+		border: 1px solid transparent;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $sound-cloud;
+			background-color: $sound-cloud;
+		}
+	}
+}
+
+.hover-vimeo {	
+	color: $vimeo;
+	
+	&:hover,
+	&:focus {
+		color: $default-white;
+		background-color: $vimeo;
+	}
+	
+	&.btn-white-inverse {
+		color: $default-white;
+		border-color: $default-white;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $vimeo;
+		}
+	}
+	
+	&.btn-dark-inverse {
+		color: $default-dark;
+		border-color: $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $vimeo;
+		}
+	}
+	
+	&.btn-dark {
+		color: $default-white;
+		border: 2px solid $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $vimeo;
+			background-color: $vimeo;
+		}
+	}
+	
+	&.btn-white {
+		background-color: $default-white;
+		color: $default-dark;
+		border: 1px solid transparent;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $vimeo;
+			background-color: $vimeo;
+		}
+	}
+}
+
+.hover-behance {	
+	color: $behance;
+	
+	&:hover,
+	&:focus {
+		color: $default-white;
+		background-color: $behance;
+	}
+	
+	&.btn-white-inverse {
+		color: $default-white;
+		border-color: $default-white;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $behance;
+		}
+	}
+	
+	&.btn-dark-inverse {
+		color: $default-dark;
+		border-color: $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $behance;
+		}
+	}
+	
+	&.btn-dark {
+		color: $default-white;
+		border: 2px solid $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $behance;
+			background-color: $behance;
+		}
+	}
+	
+	&.btn-white {
+		background-color: $default-white;
+		color: $default-dark;
+		border: 1px solid transparent;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $behance;
+			background-color: $behance;
+		}
+	}
+}
+
+.hover-bing {	
+	color: $bing;
+	
+	&:hover,
+	&:focus {
+		color: $default-white;
+		background-color: $bing;
+	}
+	
+	&.btn-white-inverse {
+		color: $default-white;
+		border-color: $default-white;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $bing;
+		}
+	}
+	
+	&.btn-dark-inverse {
+		color: $default-dark;
+		border-color: $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $bing;
+		}
+	}
+	
+	&.btn-dark {
+		color: $default-white;
+		border: 2px solid $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $bing;
+			background-color: $bing;
+		}
+	}
+	
+	&.btn-white {
+		background-color: $default-white;
+		color: $default-dark;
+		border: 1px solid transparent;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $bing;
+			background-color: $bing;
+		}
+	}
+}
+
+.hover-dribble {	
+	color: $dribble;
+	
+	&:hover,
+	&:focus {
+		color: $default-white;
+		background-color: $dribble;
+	}
+	
+	&.btn-white-inverse {
+		color: $default-white;
+		border-color: $default-white;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $dribble;
+		}
+	}
+	
+	&.btn-dark-inverse {
+		color: $default-dark;
+		border-color: $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $dribble;
+		}
+	}
+	
+	&.btn-dark {
+		color: $default-white;
+		border: 2px solid $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $dribble;
+			background-color: $dribble;
+		}
+	}
+	
+	&.btn-white {
+		background-color: $default-white;
+		color: $default-dark;
+		border: 1px solid transparent;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $dribble;
+			background-color: $dribble;
+		}
+	}
+}
+
+.hover-html5 {	
+	color: $html5;
+	
+	&:hover,
+	&:focus {
+		color: $default-white;
+		background-color: $html5;
+	}
+	
+	&.btn-white-inverse {
+		color: $default-white;
+		border-color: $default-white;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $html5;
+		}
+	}
+	
+	&.btn-dark-inverse {
+		color: $default-dark;
+		border-color: $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $html5;
+		}
+	}
+	
+	&.btn-dark {
+		color: $default-white;
+		border: 2px solid $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $html5;
+			background-color: $html5;
+		}
+	}
+	
+	&.btn-white {
+		background-color: $default-white;
+		color: $default-dark;
+		border: 1px solid transparent;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $html5;
+			background-color: $html5;
+		}
+	}
+}
+
+.hover-sharethis {	
+	color: $sharethis;
+	
+	&:hover,
+	&:focus {
+		color: $default-white;
+		background-color: $sharethis;
+	}
+	
+	&.btn-white-inverse {
+		color: $default-white;
+		border-color: $default-white;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $sharethis;
+		}
+	}
+	
+	&.btn-dark-inverse {
+		color: $default-dark;
+		border-color: $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $sharethis;
+		}
+	}
+	
+	&.btn-dark {
+		color: $default-white;
+		border: 2px solid $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $sharethis;
+			background-color: $sharethis;
+		}
+	}
+	
+	&.btn-white {
+		background-color: $default-white;
+		color: $default-dark;
+		border: 1px solid transparent;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $sharethis;
+			background-color: $sharethis;
+		}
+	}
+}
+
+.hover-tumblr {	
+	color: $tumblr;
+	
+	&:hover,
+	&:focus {
+		color: $default-white;
+		background-color: $tumblr;
+	}
+	
+	&.btn-white-inverse {
+		color: $default-white;
+		border-color: $default-white;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $tumblr;
+		}
+	}
+	
+	&.btn-dark-inverse {
+		color: $default-dark;
+		border-color: $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $tumblr;
+		}
+	}
+	
+	&.btn-dark {
+		color: $default-white;
+		border: 2px solid $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $tumblr;
+			background-color: $tumblr;
+		}
+	}
+	
+	&.btn-white {
+		background-color: $default-white;
+		color: $default-dark;
+		border: 1px solid transparent;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $tumblr;
+			background-color: $tumblr;
+		}
+	}
+}
+
+.hover-wordpress {	
+	color: $wordpress;
+	
+	&:hover,
+	&:focus {
+		color: $default-white;
+		background-color: $wordpress;
+	}
+	
+	&.btn-white-inverse {
+		color: $default-white;
+		border-color: $default-white;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $wordpress;
+		}
+	}
+	
+	&.btn-dark-inverse {
+		color: $default-dark;
+		border-color: $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $wordpress;
+		}
+	}
+	
+	&.btn-dark {
+		color: $default-white;
+		border: 2px solid $default-dark;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $wordpress;
+			background-color: $wordpress;
+		}
+	}
+	
+	&.btn-white {
+		background-color: $default-white;
+		color: $default-dark;
+		border: 1px solid transparent;
+		
+		&:hover,
+		&:focus {
+			color: $default-white;
+			border-color: $wordpress;
+			background-color: $wordpress;
+		}
+	}
+}
+
+.bg-facebook {
+	color: $default-white;
+	background-color: $facebook;
+	
+	&:hover,
+	&:focus {
+		background-color: lighten($facebook, 10%);
+		color: $default-white;
+	}
+}
+
+.bg-twitter {
+	color: $default-white;
+	background-color: $twitter;
+	
+	&:hover,
+	&:focus {
+		background-color: lighten($twitter, 10%);
+		color: $default-white;
+	}
+}
+
+.bg-instagram {
+	color: $default-white;
+	background-color: $instagram;
+	
+	&:hover,
+	&:focus {
+		background-color: lighten($instagram, 10%);
+		color: $default-white;
+	}
+}
+
+.bg-google-plus {
+	color: $default-white;
+	background-color: $google-plus;
+	
+	&:hover,
+	&:focus {
+		background-color: lighten($google-plus, 10%);
+		color: $default-white;
+	}
+}
+
+.bg-pinterest {
+	color: $default-white;
+	background-color: $pinterest;
+	
+	&:hover,
+	&:focus {
+		background-color: lighten($pinterest, 10%);
+		color: $default-white;
+	}
+}
+
+.bg-skype {
+	color: $default-white;
+	background-color: $skype;
+	
+	&:hover,
+	&:focus {
+		background-color: lighten($skype, 10%);
+		color: $default-white;
+	}
+}
+
+.bg-linkedin {
+	color: $default-white;
+	background-color: $linkedin;
+	
+	&:hover,
+	&:focus {
+		background-color: lighten($linkedin, 10%);
+		color: $default-white;
+	}
+}
+
+.bg-youtube {
+	color: $default-white;
+	background-color: $youtube;
+	
+	&:hover,
+	&:focus {
+		background-color: lighten($youtube, 10%);
+		color: $default-white;
+	}
+}
+
+.bg-yahoo {
+	color: $default-white;
+	background-color: $yahoo;
+	
+	&:hover,
+	&:focus {
+		background-color: lighten($yahoo, 10%);
+		color: $default-white;
+	}
+}
+
+.bg-rss {
+	color: $default-white;
+	background-color: $rss;
+	
+	&:hover,
+	&:focus {
+		background-color: lighten($rss, 10%);
+		color: $default-white;
+	}
+}
+
+.bg-dropbox {
+	color: $default-white;
+	background-color: $dropbox;
+	
+	&:hover,
+	&:focus {
+		background-color: lighten($dropbox, 10%);
+		color: $default-white;
+	}
+}
+
+.bg-sound-cloud {
+	color: $default-white;
+	background-color: $sound-cloud;
+	
+	&:hover,
+	&:focus {
+		background-color: lighten($sound-cloud, 10%);
+		color: $default-white;
+	}
+}
+
+.bg-vimeo {
+	color: $default-white;
+	background-color: $vimeo;
+	
+	&:hover,
+	&:focus {
+		background-color: lighten($vimeo, 10%);
+		color: $default-white;
+	}
+}
+
+.bg-behance {
+	color: $default-white;
+	background-color: $behance;
+	
+	&:hover,
+	&:focus {
+		background-color: lighten($behance, 10%);
+		color: $default-white;
+	}
+}
+
+.bg-bing {
+	color: $default-white;
+	background-color: $bing;
+	
+	&:hover,
+	&:focus {
+		background-color: lighten($bing, 10%);
+		color: $default-white;
+	}
+}
+
+.bg-dribble {
+	color: $default-white;
+	background-color: $dribble;
+	
+	&:hover,
+	&:focus {
+		background-color: lighten($dribble, 10%);
+		color: $default-white;
+	}
+}
+
+.bg-html5 {
+	color: $default-white;
+	background-color: $html5;
+	
+	&:hover,
+	&:focus {
+		background-color: lighten($html5, 10%);
+		color: $default-white;
+	}
+}
+
+.bg-sharethis {
+	color: $default-white;
+	background-color: $sharethis;
+	
+	&:hover,
+	&:focus {
+		background-color: lighten($sharethis, 10%);
+		color: $default-white;
+	}
+}
+
+.bg-tumblr {
+	color: $default-white;
+	background-color: $tumblr;
+	
+	&:hover,
+	&:focus {
+		background-color: lighten($tumblr, 10%);
+		color: $default-white;
+	}
+}
+
+.bg-wordpress {
+	color: $default-white;
+	background-color: $wordpress;
+	
+	&:hover,
+	&:focus {
+		background-color: lighten($wordpress, 10%);
+		color: $default-white;
+	}
+}

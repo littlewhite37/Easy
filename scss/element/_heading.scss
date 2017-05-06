@@ -1,0 +1,169 @@
+
+/*-----------------------------
+--------- 16. Heading ---------
+-----------------------------*/
+
+.heading-1 {
+	display:inline-block;
+	position: relative;
+	margin-bottom: 35px;
+	z-index: 1;
+	
+	@include screen-mobile {
+		padding-left: 20px;
+	}
+	
+	&:after {
+	content: "";
+    position: absolute;
+    width: 55px;
+    border: 3px solid;
+	@include positioning($top: -30px, $left: -25px);
+    z-index: -2;
+	
+	@include screen-mobile {
+		left: -5px;
+	}
+		
+	}
+	
+	&:before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		@include positioning($top: 0px, $left: -0px);
+		z-index: -1;
+		background-color: $default-white;
+	}
+	
+	&.text-center {
+		display: block;
+		
+		@include screen-mobile {
+			padding-left: 0px;
+		}
+		
+		&:after {
+			@include positioning($right: 0px, $left: 0px);
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	
+	&.right	{
+	
+		@include screen-mobile {
+			padding-left: 0px;
+		}
+		&:after {
+			@include positioning($right: -25px, $left: auto);
+		}
+	}	
+}
+
+h1.heading-1 {
+	&:after {
+		height: 85px;
+	}
+}
+
+h2.heading-1 {
+	&:after {
+		height: 80px;
+	}
+	
+	&.second-line {
+		&:after {
+			height: 108px;
+		}
+	}
+	
+	@include screen-mobile {
+		&.second-line-sm {
+			&:after {
+				height: 108px;
+			}
+		}
+	}
+}
+
+h3.heading-1 {
+	&:after {
+		height: 73px;
+	}
+	
+	&.second-line {
+		&:after {
+			height: 95px;
+		}
+	}
+	
+	@include screen-mobile {
+		&.second-line-sm {
+			&:after {
+				height: 95px;
+			}
+		}
+	}
+}
+
+h4.heading-1 {
+	&:after {
+		height: 65px;
+		width: 50px;
+	}
+	
+	&.second-line {
+		&:after {
+			height: 80px;
+		}
+	}
+	
+	@include screen-mobile {
+		&.second-line-sm {
+			&:after {
+				height: 80px;
+			}
+		}
+	}
+}
+
+h5.heading-1 {
+	&:after {
+		height: 60px;
+		width: 45px;
+	}
+	
+	&.second-line {
+		&:after {
+			height: 70px;
+		}
+	}
+	
+	@include screen-mobile {
+		&.second-line-sm {
+			&:after {
+				height: 70px;
+			}
+		}
+	}
+}
+
+.cliping-text {
+	@extend .bg;
+	
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		font-weight: bold;
+		background-color: $default-white;
+		overflow: hidden;
+		mix-blend-mode: lighten;
+		margin: 0px
+	}
+}
+
+

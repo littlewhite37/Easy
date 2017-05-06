@@ -1,0 +1,234 @@
+
+/*----------------------------
+--------- 1. General ---------
+----------------------------*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
+
+html {
+   overflow-x: hidden;
+}
+
+html, html a, body {
+   -webkit-font-smoothing: antialiased;
+}
+
+body {
+   font-family: $font-family-ptsans;
+   font-size: 15px;
+   overflow-x: hidden;
+    padding: 0!important;
+}
+
+.wrapper {
+	z-index: 1;
+}
+
+p {
+	font-family: $font-family-ptsans;
+	color: $default-gray;
+	font-weight: 300;
+	line-height: 1.8;
+    letter-spacing: 0.5px;
+	
+}
+
+span {
+	display: inline-block;
+	letter-spacing: 0.5px;
+}
+
+a {
+    color: $default-dark;
+    font-family: $font-family-ptsans;
+	
+    &:focus,
+    &:hover {
+        text-decoration: none;
+    }
+	
+	 &:focus {
+		outline: none;
+	 }
+}
+
+ul {
+	list-style: none;
+	margin-bottom: auto;
+	padding-left: 0;
+}
+
+pre {
+	border-radius: 0px;
+	border-color: $default-light-gray;
+}
+
+.font-primary {
+	font-family: $font-family-ptsans !important;
+}
+
+.font-secondary {
+	font-family: $font-family-rc !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $default-dark;
+	font-family: $font-family-rc;
+	letter-spacing: 0.5px;
+	
+	a {
+		font-family: $font-family-rc;
+	}
+}
+
+.text-link {
+	text-decoration: underline !important;
+	letter-spacing: 0.5px;
+	
+	&:hover,
+	&:foceus {
+		text-decoration: underline !important;
+	}
+}
+
+.text-white {
+	color: $default-white !important;
+	
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p	{
+		color: $default-white;
+	}
+}
+
+.text-light-gray {
+	color: $default-light-gray !important;
+	
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p	{
+		color: $default-light-gray;
+	}
+}
+
+.text-deep-gray {
+	color: $default-deep-gray !important;
+	
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p	{
+		color: $default-deep-gray;
+	}
+}
+
+.text-gray {
+	color: $default-gray !important;
+	
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p	{
+		color: $default-gray;
+	}
+}
+
+.text-dark {
+	color: $default-dark !important;
+	
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p	{
+		color: $default-dark;
+	}
+}
+
+.text-danger {
+	color: $default-danger;
+}
+
+.text-warning {
+	color: $default-warning;
+}
+
+.text-success {
+	color: $default-success;
+}
+
+.text-info {
+	color: $default-info;
+}
+
+.dropcap {
+	display: block;
+    float: left;
+    font-size: 35px;
+    line-height: 32px;
+    margin: 5px 15px 0 0;
+	color: $default-dark;
+}
+
+.bg-transparent {
+	background-color: transparent !important;
+}
+
+.bg-dark {
+	background-color: $default-dark !important;
+}
+
+.bg-white {
+	background-color: $default-white !important;
+}
+
+.bg-gray {
+	background-color: $default-deep-white !important;
+	
+	.heading-1:before {
+		background-color: $default-deep-white
+	}
+}
+
+.bg-danger {
+	background-color: $default-danger;
+}
+
+.bg-success {
+	background-color: $default-success;
+}
+
+.bg-warning {
+	background-color: $default-warning;
+}
+
+.bg-info {
+	background-color: $default-info;
+}
+
+iframe {
+	border: 0;
+}

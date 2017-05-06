@@ -1,0 +1,10 @@
+{
+  "name": "myproject",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-nodeunit": "~0.1.2",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "~0.1.2"
+  }
+}

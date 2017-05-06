@@ -1,0 +1,177 @@
+
+/*------------------------------------
+--------- 17. Features Block ---------
+------------------------------------*/
+
+.features-block-1 {
+	position: relative;
+	margin-bottom: 60px;
+	@include transition(all 0.6s linear);
+	
+	i {
+	    font-size: 40px;	
+		@include transition(all 0.3s linear);
+	}
+	
+	.features-tittle {
+		font-family: $font-family-ptsans;
+		font-weight: bold;
+		letter-spacing: 0.5px;
+		font-size: 18px;
+		margin-bottom: 10px;
+		display: inline-block;
+	}
+}
+
+.features-block-2 {
+	position: relative;
+	margin-bottom: 50px;
+	
+	i {
+		font-size: 45px;
+		color: $default-dark;
+		position: absolute;
+		@include positioning($top: 15px, $left: 0px);
+	}
+	
+	.features-info {
+		padding-left: 80px;
+		text-align: left;
+		
+		.features-tittle {
+			font-family: $font-family-ptsans;
+			font-weight: bold;
+			letter-spacing: 0.5px;
+			font-size: 18px;
+			margin-bottom: 10px;
+			display: inline-block;
+		}
+	}
+	
+	&:last-child {
+		margin-bottom: 0px
+	}
+}	
+
+.features-block-3 {
+	position: relative;
+	margin-bottom: 50px;
+	padding: 0px 15px;
+	
+	i {
+		font-size: 35px;
+		color: $default-dark;
+		position: absolute;
+		@include positioning($top: 25px, $left: 0px);
+		@include transition(all 0.4s linear);
+	}
+	
+	.features-info {
+		padding-left: 60px;
+		text-align: left;
+		
+		.features-tittle {
+			font-family: $font-family-ptsans;
+			font-weight: bold;
+			letter-spacing: 0.5px;
+			font-size: 18px;
+			margin-bottom: 10px;
+			display: inline-block;
+		}
+	}
+}
+
+.features-block-4 {
+	position: relative;
+	background-color: $default-white;
+	
+	@include screen-tablet {
+		margin-bottom: 50px;
+	} 
+	
+	.features-info {
+		padding: 60px ;
+		
+		@include screen-tablet {
+			padding: 40px ;
+		}
+		
+		.features-icon {
+			color: $default-gray;
+			position: absolute;
+			font-size: 120px;
+			left: 30px;
+			bottom: 30px;
+			opacity: 0.1;
+			
+			&.right {
+				right: 30px;
+				left: auto;
+			}
+		}
+		
+		.features-tittle {
+			font-size: 20px;
+			font-weight: bold; 
+			color: $default-dark;
+		}
+	}
+}
+
+.features-block-5 {
+	@extend .card;
+	padding: 60px 50px;
+	text-align: center;
+	
+	&:hover {
+		i {
+			@include transform(scale(1.1));
+		}	
+	}
+	
+	i {
+		font-size: 40px;
+		@include transition(all 0.4s linear);
+	}
+	
+	.features-info{
+		margin-top: 30px;
+		
+		.features-tittle {
+			font-family: PT Sans, sans-serif;
+			font-weight: bold;
+			letter-spacing: 0.5px;
+			font-size: 20px;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.features-block-6 {
+	margin-bottom: 30px;
+	
+	.features-info{
+		position: relative;
+		
+		.features-icon {
+			position: absolute;
+			@include positioning($top: -25px, $left: 0px);
+			z-index: 0;
+			line-height: 1;
+			font-weight: bold;
+			font-size: 60px;
+			color: $default-light-gray;
+		}
+		
+		.features-tittle {
+			position: relative;
+			font-family: PT Sans, sans-serif;
+			font-weight: bold;
+			letter-spacing: 0.5px;
+			font-size: 20px;
+			margin-bottom: 25px;
+			padding-left: 30px;
+		}
+	}
+}
+

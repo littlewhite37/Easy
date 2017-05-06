@@ -1,0 +1,99 @@
+
+/*---------------------------
+--------- 25. Table ---------
+---------------------------*/
+
+.table {
+	>tbody {
+		>tr {
+			>td {
+				padding: 25px;
+				color: $default-gray;
+				border-top: 1px solid $default-light-gray;
+			}
+			
+			>th {
+				padding: 25px;
+				border-top: 1px solid $default-light-gray;
+			}
+		}
+	}
+	
+	>thead {
+		>tr {
+			>td {
+				padding: 25px;
+				color: $default-dark;
+				border-top: 1px solid $default-light-gray;
+			}
+			
+			>th {
+				padding: 25px;
+				border-bottom: 0px;
+				border-top: 1px solid $default-light-gray;
+			}
+		}
+	}
+	
+	>tfoot {
+		>tr {
+			>td {
+				padding: 25px;
+				border-top: 1px solid $default-light-gray;
+			}
+			
+			>th {
+				padding: 25px;
+				border-top: 1px solid $default-light-gray;
+			}
+		}
+	}
+	
+	&.table-bordered {
+		>tbody {
+			>tr {
+				>td {
+					border: 1px solid $default-light-gray;
+				}
+				
+				>th {
+					border: 1px solid $default-light-gray;
+				}
+			}
+		}
+		
+		>thead {
+			>tr {
+				>td {
+					border: 1px solid $default-light-gray;
+				}
+				
+				>th {
+					border: 1px solid $default-light-gray;
+				}
+			}
+		}
+		
+		>tfoot {
+			>tr {
+				>td {
+					border: 1px solid $default-light-gray;
+				}
+				
+				>th {
+					border: 1px solid $default-light-gray;
+				}
+			}
+		}
+	}
+	
+	&.table-hover {
+		>tbody {
+			>tr {
+				&:hover {
+					background-color: $default-light-gray-ex;
+				}
+			}
+		}
+	}
+}

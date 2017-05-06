@@ -1,0 +1,302 @@
+
+/*-------------------------
+--------- 24. Tab ---------
+-------------------------*/
+
+.tab-style-1 {
+	border-bottom: 1px solid $default-light-gray;
+	
+	li {
+		position: relative;
+		
+		a {
+			font-family: $font-family-rc;
+			font-size: 17px;
+			color: $default-dark;
+			border: 0px;
+			@include transition(all 0.3s ease-in-out);
+			
+			&:after {
+				content:"";
+				@include transition(all 0.3s ease-in-out);
+				position: absolute;
+				@include positioning($bottom: -2px, $left: 0px);
+				width: 100%;
+				height: 2px;
+			}
+			
+			&:hover,
+			&:focus {
+				background-color: transparent;
+				border-color: transparent;
+				
+			}
+		}
+		
+		&.active {
+			>a {
+				border: 0px;
+				border-bottom-color: $default-light-gray;
+
+				
+				&:hover,
+				&:focus {
+					border: 0px;
+					border-bottom-color: $default-light-gray;
+					background-color: transparent;
+				}
+			}
+		}	
+	}
+}
+
+.tab-style-2 {
+	border-bottom: 0px;
+	
+	li {
+		position: relative;
+		
+		a {
+			font-family: $font-family-rc;
+			font-size: 17px;
+			background-color: $default-white;
+			color: $default-dark;
+			@include box-shadow( 1px, 1px, 20px, 1px, rgba(0,0,0,0.08));
+			margin-right: 10px;
+			border: 0px;
+			border-radius: 0px;
+			@include transition(all 0.3s ease-in-out);			
+			
+			
+			&:hover,
+			&:focus {
+				background-color: $default-dark;
+				color: $default-white;
+				border-color: transparent;
+				
+			}
+		}
+		
+		&.active {
+			>a {
+				border: 0px;
+				background-color: $default-dark;
+				color: $default-white;
+
+				
+				&:hover,
+				&:focus {
+					border: 0px;
+					background-color: $default-dark;
+					color: $default-white;
+				}
+			}
+		}	
+	}
+}
+
+.tab-style-3 {
+	border-bottom: 0px;
+	
+	&.item-2 {
+		li {
+			width: 49.99%;
+		}
+	}
+	
+	&.item-3 {
+		li {
+			width: 33.3333333%;
+		}
+	}
+	
+	&.item-4 {
+		li {
+			width: 24.98%;
+		}
+	}
+	
+	&.item-5 {
+		li {
+			width: 20%;
+		}
+	}
+	
+	@include screen-tablet {
+		&.item-2,
+		&.item-3,
+		&.item-4,
+		&.item-5 {
+			li {
+				width: 50%;
+			}
+		}
+	}
+	
+	@include screen-mobile {
+		&.item-2,
+		&.item-3,
+		&.item-4,
+		&.item-5 {
+			li {
+				width: 100%;
+			}
+		}
+	}
+	
+	li {
+		position: relative;
+		text-align: center;
+		background-color: $default-dark;
+		
+		a {
+			font-family: $font-family-rc;
+			font-size: 17px;
+			color: $default-light-gray;
+			padding: 20px 15px;
+			margin-right: 0px;
+			border: 0px;
+			border-radius: 0px;
+			@include transition(all 0.3s ease-in-out);	
+			
+			i {
+				display: block;
+				font-size: 30px;
+				margin-bottom: 10px;
+			}
+			
+			
+			&:hover,
+			&:focus {
+				background-color: lighten($default-dark,5%);
+				color: $default-white;
+				border-color: transparent;
+				
+			}
+		}
+		
+		&.active {
+			>a {
+				border: 0px;
+				background-color: lighten($default-dark,10%);
+				color: $default-white;
+
+				
+				&:hover,
+				&:focus {
+					border: 0px;
+					background-color: lighten($default-dark,10%);
+					color: $default-white;
+				}
+			}
+		}	
+	}
+}
+
+.tab-style-4 {
+	border-bottom: 1px solid $default-light-gray;
+	
+	&.item-2 {
+		li {
+			width: 49.99%;
+		}
+	}
+	
+	&.item-3 {
+		li {
+			width: 33.3333333%;
+		}
+	}
+	
+	&.item-4 {
+		li {
+			width: 24.98%;
+		}
+	}
+	
+	&.item-5 {
+		li {
+			width: 20%;
+		}
+	}
+	
+	@include screen-tablet {
+		&.item-2,
+		&.item-3,
+		&.item-4,
+		&.item-5 {
+			li {
+				width: 50%;
+			}
+		}
+	}
+	
+	@include screen-mobile {
+		&.item-2,
+		&.item-3,
+		&.item-4,
+		&.item-5 {
+			li {
+				width: 100%;
+				border-bottom: 1px solid $default-light-gray;
+			}
+		}
+	}
+	
+	li {
+		position: relative;
+		
+		a {
+			font-family: $font-family-rc;
+			font-size: 17px;
+			text-align: center;
+			padding: 20px 15px;
+			color: $default-dark;
+			border: 0px;
+			@include transition(all 0.3s ease-in-out);
+			
+			i {
+				display: block;
+				font-size: 30px;
+				margin-bottom: 10px;
+			}
+			
+			&:after {
+				content:"";
+				@include transition(all 0.3s ease-in-out);
+				position: absolute;
+				@include positioning($bottom: -2px, $left: 0px);
+				width: 100%;
+				height: 2px;
+			}
+			
+			&:hover,
+			&:focus {
+				background-color: transparent;
+				border-color: transparent;
+				
+			}
+		}
+		
+		&.active {
+			>a {
+				border: 0px;
+				border-bottom-color: $default-light-gray;
+
+				
+				&:hover,
+				&:focus {
+					border: 0px;
+					border-bottom-color: $default-light-gray;
+					background-color: transparent;
+				}
+			}
+		}	
+	}
+}
+
+.tab-content {
+	.tab-pane {
+		padding: 30px 0px;
+	}
+}

@@ -1,0 +1,133 @@
+
+/*---------------------------------
+--------- 19. Testimonial ---------
+---------------------------------*/
+
+.testimonial-1 {
+	.client {
+		font-weight: bold;
+		font-size: 15px;
+		margin-bottom: 15px;
+		display: block;
+	}
+	
+	.swiper-button-prev, 
+	.swiper-button-next {
+		width: auto;
+		height: auto;
+		@include positioning($top: auto, $right: 0px, $bottom: 0px);
+		background: none;
+		font-size: 30px
+	}
+	
+	.swiper-button-prev {
+		@include positioning($left: auto, $right: 40px);
+	}
+}
+
+.testimonial-2 {
+
+	.quote {
+		text-align: center;
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		color: $default-dark;
+		font-size: 16px;
+		line-height: 2.2;
+	}
+	
+	.client {
+		text-align: center;
+		font-weight: bold;
+		font-size: 15px;
+		margin-bottom: 15px;
+		display: block;
+		letter-spacing: 0.5px;
+	}
+} 
+
+.testimonial-3 {
+	
+	.client {
+		display: block;
+		width: 100%;
+		
+		.client-img {
+			max-width: 55px;
+			border-radius: 50%;
+			margin: 7.5px;
+			float: left;
+		}
+		
+		.client-info {
+			margin-top: 15px;
+			margin-left: 10px;
+			display: inline-block;
+			
+			
+			.client-name {
+				margin: 0px;
+			}
+		}
+	}	
+	
+	.client-tab {
+		
+		cursor:-webkit-grab;
+			
+		a {
+			opacity: 0.3;
+			display: block;
+		}
+		
+		.active a {
+			opacity: 1;
+		}
+	}
+}
+
+.testimonial-4 {
+	position: relative;
+	
+	.card {
+		margin: 20px 10px;
+		padding: 50px 30px 35px;
+	}
+	
+	.quote {
+		padding-bottom: 20px;
+		margin-bottom: 15px;
+		border-bottom: 1px solid $default-light-gray;
+		
+		.quote-title  {
+			margin-bottom: 20px;
+			font-size: 18px;
+		}
+	}
+	
+	.client {
+		display: block;
+		width: 100%;
+		
+		.client-img {
+			max-width: 55px;
+			border-radius: 50%;
+			margin: 7.5px;
+			float: left;
+		}
+		
+		.client-info {
+			margin-top: 15px;
+			margin-left: 10px;
+			display: inline-block;
+			
+			
+			.client-name {
+				margin: 0px;
+			}
+		}
+	}	
+	
+
+}	
