@@ -1,0 +1,693 @@
+
+
+@import '../mixins'; // Mixins
+@import '../variables'; // Variables
+
+//==================================
+// 	Theme-color
+//==================================
+
+// change your theme colors here
+$theme-color: #f28c64 !default;
+$theme-color-sub: #fff1ec !default;
+$theme-color-third: #5699a9 !default;
+
+
+//Base
+
+/*================================
+===========  General  ============
+================================*/
+
+a {
+	&:hover,
+	&:focus {
+		color: $theme-color;
+	}
+}
+
+.theme-color {
+	color: $theme-color;
+}
+
+.theme-color-bg {
+	background-color: $theme-color;
+}
+
+/*================================
+===========  Section  ============
+================================*/
+
+.theme-overlay {
+	&:before {
+		background-color: $theme-color;
+	}
+}
+
+
+
+//Modules
+/*================================
+===========  Headers  ============
+================================*/
+
+.header {
+	
+	.navbar-collapse {
+		
+		ul.navbar-nav {
+		
+			> li {
+			
+				&:hover,
+				&:focus,
+				&.active {
+				
+					> a {
+						color: $theme-color;
+					}
+				}
+			}
+		}
+	}
+	
+	&.header-sticky.sticky  {
+		
+		.navbar-collapse {
+		
+			ul.navbar-nav {
+		
+				> li {
+				
+					&:hover,
+					&:focus,
+					&.active {
+					
+						> a {
+							color: $theme-color;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	&.header-full-screen .fs-nav .fs-nav-item:hover a, {	
+		.fs-nav {
+		
+			.fs-nav-item {
+			
+				&:hover {
+				
+					a {
+						background-color: $theme-color;
+					}
+				}
+			}
+		}
+	}
+	
+	.cart-menu {
+		
+		.check-out {
+			background-color: $theme-color;
+		}
+		
+		a {
+		
+			&.check-out {
+			
+				&:hover {
+					background-color: $theme-color;
+				}
+			}
+		}
+	}
+}
+
+/*===================================
+===========  Page Title  ============
+===================================*/
+.breadcrumb {
+	li {
+		a {
+			&:hover {
+				color: $theme-color;
+			}
+		}
+	}
+}
+
+.dark-overlay {
+	.breadcrumb {
+		li {
+			a {
+				&:hover {
+					color: $theme-color;
+				}
+			}
+		}
+	}
+}
+
+/*================================
+===========  Loaders  ============
+================================*/
+.loader-wrapper {
+	
+	.loader-1 {
+	
+		&:before {
+			border-color: $theme-color;
+		}
+	}
+	
+	.loader-2 { 
+		border-top-color: $theme-color;
+	}
+}
+
+
+
+//Element
+
+/*================================
+===========  Buttons  ============
+================================*/
+.btn-theme {
+	background-color: $theme-color;
+	border-color: $theme-color;
+	
+	&:hover,
+	&:focus	{
+		background-color: lighten ($theme-color, 20%);
+	}
+}
+
+.btn-theme-inverse {
+	color: $theme-color;
+	border-color: $theme-color;
+	
+	&:hover,
+	&:focus	{
+		background-color: $theme-color;
+	}
+}
+
+.btn-white,
+.btn-gray {
+	&:hover,
+	&:focus	{
+		background-color: $theme-color;
+	}
+}
+
+.btn-white-inverse {
+	&:hover,
+	&:focus	{
+		background-color: $theme-color;
+		border: 2px solid $theme-color !important;
+	}
+}
+
+/*================================
+===========  Heading  ============
+================================*/
+.heading-1 {
+	&:after {
+		border-color: $theme-color;
+	}
+}
+
+/*===============================
+===========  Images  ============
+================================*/
+.img-style-1 {
+	&:before {
+		background-color: $theme-color-sub;
+	}
+	
+}
+
+/*========================================
+===========  Features Blocks  ============
+========================================*/
+.features-block-1 {
+	
+	&:hover{
+		i {
+			color: $theme-color;
+		}
+	}
+}
+
+.features-block-3 {
+	
+	&:hover{
+		i {
+			color: $theme-color;
+		}
+	}
+}
+
+.features-block-5 {
+	
+	&:hover{
+		i {
+			color: $theme-color;
+		}
+	}
+}
+
+/*============================
+===========  Tab  ============
+============================*/
+
+.tab-style-1  {
+
+	li {
+		&.active {
+			.a {
+				color: $theme-color;
+			}
+			
+			> a {
+				&:after {
+					background-color: $theme-color;
+				}
+			}
+		}
+		
+		a {
+			&:hover,
+			&:focus {
+				color: $theme-color;
+				
+				&:after {
+					background-color: $theme-color;
+				}
+			}
+		}
+	}
+}
+
+.tab-style-3 {
+	
+	&.theme-style {
+	
+		li {
+			background-color: $theme-color;
+			
+			&.active {
+			
+				> a {
+					background-color: lighten($theme-color,10%);
+				}
+			}
+			
+			a {
+				&:hover,
+				&:focus {
+					background-color: lighten($theme-color,5%);
+				}
+			}
+		}
+	}
+}
+
+/*lighten 10% */
+.tab-style-3.theme-style li.active > a {
+	background-color: #5e91f3;
+}
+
+/* lighten 5% */
+.tab-style-3.theme-style li a:hover,
+.tab-style-3.theme-style li a:focus {
+	background-color: #4681f2;
+}
+
+.tab-style-4  {
+
+	li {
+		&.active {
+			> a {
+				color: $theme-color;
+				
+				&:hover,
+				&:focus {
+					color: $theme-color;
+				}
+				
+				&:after {
+					background-color: $theme-color;
+				}
+			}
+		}
+		
+		a {
+			&:hover,
+			&:focus {
+				color: $theme-color;
+				
+				&:after {
+					background-color: $theme-color;
+				}
+			}
+		}
+	}
+}
+
+/*==============================
+===========  Team   ============
+==============================*/
+.team-4 {
+
+	ul.team-tab {
+	
+		li {
+		
+			a {
+			
+				&:before {
+					background-color: $theme-color;
+				}
+			}
+		}
+	}
+}
+
+/*=================================
+===========  Pricing   ============
+=================================*/
+.pricing-2 {
+
+	.pricing-table {
+	
+		&.recommended {
+		
+			.pricing-footer {
+			
+				.btn {
+					background-color: $theme-color;
+				}
+			}
+		}
+	}
+}
+
+/*=====================================
+===========  Progess Bar   ============
+=====================================*/
+.progress-wrapper {
+
+	.progress {
+	
+		&.progress-theme {
+		
+			.progress-bar {
+				background-color: $theme-color;
+			}
+		}
+	}
+}
+
+/*==================================
+===========  Timeline   ============
+==================================*/
+.timeline {
+	ul {
+		li {
+			&:hover
+			&.active {
+				.timeline-content {
+					&:before {
+						border-color: $theme-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*=============================
+===========  Form  ============
+=============================*/
+input,
+textarea {
+
+	&.material-input {
+	
+		&.theme-color {
+		
+			&:focus {
+				border-color: $theme-color;
+			}
+		}
+	}
+}
+
+.radio {
+
+	&.theme-color {
+	
+		input[type="radio"] {
+			&:checked + label:before {
+				border-color: $theme-color;
+			}
+			
+			+ label:after {
+				background-color: $theme-color;
+			}
+		}
+	}
+
+}
+
+.checkbox {
+	
+	&.theme-color {
+		input[type="checkbox"] {
+		
+			&:checked + label:after {
+				background-color: $theme-color;
+			}	
+		}
+	}	
+}
+
+/*=======================================
+===========  Swiper Slider   ============
+=======================================*/
+.swiper-bullet-1 {
+
+	&.theme-bullet {
+	
+		.swiper-pagination-bullet-active {
+		
+			&:after {
+				border-color: $theme-color;
+			}
+		}
+	}
+}
+
+.theme-bullet {
+
+	.swiper-pagination-bullet-active {
+		background-color: $theme-color;
+	}
+} 
+
+/*===============================
+===========  Widget  ============
+===============================*/
+.widget-news {
+
+	.news-item {
+	
+		.news-info {
+		
+			.author {
+				color: $theme-color-third;
+			}
+		}
+	}
+}
+
+.widget-tags {
+
+	&.theme-color {
+		ul {
+		
+			li {
+			
+				a {
+				
+					&:hover {
+						background-color: $theme-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+//Blog
+
+/*=====================================
+===========  Blog Default  ============
+=====================================*/
+
+.blog-default {
+
+	.blog-item {
+	
+		.author {
+			color: $theme-color;
+		}
+		
+		.blog-meta {
+		
+			&:after {
+				background-color: $theme-color;
+			}
+		}
+	}
+}
+
+/*==================================
+===========  Blog grid  ============
+==================================*/
+
+.blog-grid {
+
+	.blog-item {
+	
+		.author {
+			color: $theme-color;
+		}
+	}
+}
+
+/*=====================================
+===========  Blog Classic  ============
+=====================================*/
+
+.blog-classic {
+
+	.blog-item {
+	
+		.blog-content {
+		
+		
+			.blog-action {
+				a {
+					&:hover {
+						color: $theme-color;
+					}
+				}
+			}
+			
+			.continue-reading {
+				&:hover {
+					color: $theme-color;
+				}
+			}
+		}
+	}
+}
+
+/*==================================
+===========  Blog Card  ============
+==================================*/
+
+.blog-card {
+
+	.blog-item {
+	
+		.blog-wrapper {
+		
+			.blog-content {
+			
+				.blog-action {
+					
+					.likes,
+					.comments,
+					.share	{
+					
+						a{
+							&:hover {
+								color: $theme-color;
+							}
+						}
+					}
+					
+					.continue-reading {
+						
+						&:hover,
+						&:focus {
+							border-color: $theme-color;
+							background-color: $theme-color;
+						}
+					}
+				}
+				
+				.blog-meta,
+				.blog-meta-alt {
+					
+					.author {
+						color: $theme-color;
+					}
+				}
+			}
+			
+			&.theme-color-bg {
+				background-color: $theme-color;
+			}
+		}
+	}
+}
+
+/*=========================================
+===========  Blog Single Post  ============
+=========================================*/
+
+.single-post-cover {
+	
+	.blog-meta {
+		
+		.author {
+			&:hover {
+				color: $theme-color;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,8 +2,8 @@
 
 	var markers = [
     	{   // Map Coordination 
-       		"lat": '3.117726',
-            "lng": '101.677358',
+       		"lat": '43.6588013',
+            "lng": '-79.3966234',
 			
 			// Map pop up desription
 			"description": '<div class="map-info"><h3>We Are Here</h3> <p>Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.</p></div>'

@@ -1,0 +1,313 @@
+
+/*---------------------------------
+--------- 5. Side Headers ---------
+---------------------------------*/
+
+//bootstrap style reset
+.side-header {
+	.nav>li>a:focus,
+	.nav>li>a:hover {
+		text-decoration: none;
+		background-color: transparent;
+	}
+	.navbar-nav {
+		margin: 0px;
+	}
+	
+	.nav .open>a,
+	.nav .open>a:focus,
+	.nav .open>a:hover {
+		background-color: transparent;
+		border-color: transparent;
+	}
+	
+	.navbar-nav.sm-collapsible {
+		.caret:before {
+			font-family: "exclusive-icon";
+			content:"\e224";
+			@include transition(all 0.4s ease-in-out);
+		}	
+		
+		
+		.open > a > {
+			.caret {
+				@include transform(rotate(90deg))	
+			}
+			
+			.caret:before {
+				content:"\e224";
+			}
+		}	
+	}
+	@include screen-mobile {
+		.navbar-nav .open .dropdown-menu>li>a {
+			line-height: 2;
+		}
+	} 
+}
+
+.side-header {
+	width: 280px;
+    background-color: $default-dark;
+    z-index: 1000;
+	@include positioning($top: 0px, $bottom: 0px);
+    position: fixed;  
+    overflow: hidden;
+	position: fixed;
+	@include transition(all 0.2s ease-in-out);
+	
+	&.side-header-left {
+		@include positioning($right: auto, $left: -280px);
+		
+		&.active {
+			left: 0px;
+		}
+	}
+	
+	&.side-header-right {
+		@include positioning($left: auto, $right: -280px);
+		
+		&.active {
+			right: 0px;
+		}
+	}
+	
+	.side-header-logo {
+		padding: 15px;
+		margin-bottom: 30px;
+		
+		a {
+			img {
+				width: 150px;
+				height: auto;
+			}
+		}
+	}
+	
+	.side-header-inner {
+		position: relative;
+		height: 100%
+	}
+	
+	ul.side-header-menu {
+		height: 85%;
+		overflow-y: auto;
+	
+		li {
+			a {
+				color: $default-gray;
+				display: block;
+				padding: 10px 15px;
+				font-size: 13px;
+				@include transition(all 0.2s ease-in-out);
+				
+				&:hover, 
+				&:focus {
+					color: $default-white;
+					background-color: transparent;
+				}
+				
+				.caret {
+					border-top: 0px;
+					border-top: 0px;
+					border-right: 0px;
+					border-left: 0px;
+					float: right;
+					padding: 0;
+					width: 32px;
+					height: 26px;
+					font-size: 10px;
+					line-height: 24px;
+					text-align: center;
+					
+					&:before {
+						font-family: "exclusive-icon";
+						content:"\e224";
+					}
+				}	
+	
+			}
+			
+			&.open > a > {
+				.caret {
+					@include transform(rotate(90deg))	
+				}
+			}
+		}
+		
+		> li {
+		
+			> a {
+				font-size: 13px;
+				text-transform: uppercase;
+				@include transition(all 0.4s ease-in-out);
+			}
+		}
+	}
+	
+	.dropdown-menu {
+		position: static;
+		float: none;
+		width: auto;
+		margin-top: 0;
+		background-color: $dropdown-menu-color;
+		border: 0;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		
+		.sub-menu {
+			
+			.dropdown-menu {
+				padding-left: 15px ;
+			}
+		}
+		
+		.menu-tittle {
+			padding-left: 15px;
+			font-weight: bold;
+			margin-top: 10px;
+			color: $default-light-gray;
+		}
+	}
+	
+	.nav-tools {
+		position: fixed;
+		bottom: 0;
+		width: 280px;
+		background-color: lighten($default-dark, 7%);
+		
+		.tools-wrapper {
+			position: relative;
+			
+			a.nav-item {
+				text-align: center;
+				padding: 15px;
+				color: $default-gray;
+				@include transition(all 0.4s ease-in-out);
+				display: block;
+				
+				&:hover,
+				&.focus {
+					color: $default-light-gray;
+					background-color: lighten($default-dark, 15%);
+				}
+			}
+		}
+	}
+	
+}
+
+.side-header-toggle-wrapper {
+
+}
+
+.side-header-toggle {
+		position: absolute;
+		@include positioning($top: 0px, $left: 30px);
+		margin: 37px 5px;
+		padding: 8px 10px;
+		@include transition(all 0.3s ease-in-out);
+		background-color: transparent;
+		border: 0px;
+		box-shadow: none;
+		outline: none !important;
+		
+		&.go-right {
+			right: 30px;
+		}
+		
+		span.top-bar,
+		span.middle-bar,
+		span.bottom-bar {
+			@include transition(all 0.4s ease-in-out);
+			width: 20px;
+			height: 2px;
+			position: absolute;
+			left: 0px;
+			display: block;
+			background-color : $default-white;		
+		}	
+		
+		span.top-bar {
+			top: 0px;
+			@include transform-origin(left center)
+		}
+		
+		span.middle-bar {
+			top: 50%;
+			@include transform(translateY(-50%));
+			@include transform-origin(left center)
+		}
+		
+		span.bottom-bar {
+			bottom: 0px;
+			@include transform-origin(left center)
+		}
+		
+		span.menu-text {
+			position: absolute;
+			@include positioning($top: -2px, $right: -45px);
+			@include transition(all 0.4s ease-in-out);
+			font-weight: bold;
+			color: $default-white;
+			
+			&.right {
+				left: -45px;
+			} 
+		}
+		
+		&.active {
+			span.top-bar {
+				@include transform(rotate(45deg));
+			}
+			
+			span.middle-bar {
+				opacity: 0;
+			}
+			
+			span.bottom-bar {
+				@include transform(rotate(-45deg));
+			}
+		}
+	}
+
+
+.wrapper {
+	position: relative;
+	
+	@include transition(all 0.2s ease-in-out);
+	
+	&.sideheader-active-left {
+		left: 0px;
+		
+		&.active {
+			left: 280px;
+		}
+	}
+	
+	&.sideheader-active-right {
+		right: 0px;
+		
+		&.active {
+			right: 280px;
+		}
+		
+		.header {
+			ul.navbar-nav {
+				float: left;
+			}
+			
+			.nav-tools .cart-menu {
+				@include positioning($right: auto, $left: 0px);
+			}
+		}		
+		
+		.side-header-toggle {
+			@include positioning($right: 30px, $left: auto);
+			
+			span.menu-text {
+				@include positioning($right: auto, $left: -45px);
+			}
+		}
+	}
+}

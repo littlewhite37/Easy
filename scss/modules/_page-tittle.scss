@@ -1,0 +1,129 @@
+
+/*-------------------------------
+--------- 8. Page Title ---------
+-------------------------------*/
+
+.page-tittle {
+	position: relative;
+	background-color: $default-deep-white;
+
+	&.page-tittle-sm {
+		padding: 50px 0;
+	}
+	
+	&.page-tittle-md {
+		padding: 80px 0;
+	}
+	
+	&.page-tittle-lg {
+		padding: 120px 0;
+	}
+	
+	&.page-tittle-xl {
+		padding: 200px 0;
+		
+		@include screen-mobile {
+			padding: 150px 0;
+		}
+	}
+	
+	.page-tittle-head {
+		display: inline-block;
+		
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			fomt-family: $font-family-rc;
+			margin-bottom: 10px;
+		}		
+	}
+
+	.breadcrumb {
+		display: inline-block;
+		background-color: transparent;
+		font-weight: bold;
+		padding: 0px;
+		letter-spacing: 0.5px;
+		
+		li {
+			line-height: 2;
+			a {
+				color: $default-gray;
+			}
+		}
+		&>.active {
+			color: $default-gray;
+			font-weight: normal
+		}
+		@include screen-mobile {
+			&.pull-right {
+				float: none !important;
+				display: block;
+			}
+		}
+	}
+	
+	&.dark-overlay {
+		.page-tittle-head {
+			
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				color: $default-white;
+			}	
+			
+			p,
+			span {
+				color: $default-deep-gray;
+			}
+		}
+		
+		.breadcrumb {
+			
+			li a {
+				color: $default-light-gray;
+			}
+			
+			&>.active {
+				color: $default-deep-gray;
+			}	
+		}
+	}
+	
+}
+
+.page-cover {
+	position: relative;
+	
+	&.page-cover-sm {
+		padding: 50px 0;
+	}
+	
+	&.page-cover-md {
+		padding: 80px 0;
+	}
+	
+	&.page-cover-lg {
+		padding: 120px 0;
+	}
+	
+	&.page-cover-xl {
+		height: 60vh;
+	}
+	
+	&.page-cover-full {
+		height: 85vh;
+	}
+	
+	.cover-caption {
+		@extend .hero-caption;
+	}
+}
+
+

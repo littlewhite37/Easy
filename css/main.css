@@ -3599,6 +3599,7 @@ section {
     box-shadow: 2px 10px -7px rgba(0, 0, 0, 0.5) false;
     border-bottom: 1px solid #dedede;
     background-color: #fff;
+
 }
 
 .header.navbar-fixed-top.sticky .nav-logo a {
@@ -3664,10 +3665,13 @@ section {
     border: none;
     border-radius: 0;
     margin-bottom: 0;
+
+
 }
 
 @media only screen and (max-width: 992px) {
     .header .navbar-collapse {
+
         background-color: #333743;
         padding: 0px;
         overflow-x: hidden;
@@ -3745,7 +3749,7 @@ section {
     .header.header-transparent .navbar-collapse ul.navbar-nav > li:hover > a,
     .header.header-transparent .navbar-collapse ul.navbar-nav > li:focus > a,
     .header.header-transparent .navbar-collapse ul.navbar-nav > li.active > a {
-        color: #cecece;
+        color: #ffd700;
     }
 }
 
@@ -3755,12 +3759,18 @@ section {
     -webkit-box-shadow: 2px 10px -7px rgba(0, 0, 0, 0.5) false;
     -moz-box-shadow: 2px 10px -7px rgba(0, 0, 0, 0.5) false;
     box-shadow: 2px 10px -7px rgba(0, 0, 0, 0.5) false;
+
 }
 
 @media only screen and (min-width: 992px) {
     .header.header-sticky.sticky {
         border-bottom: 1px solid #dedede;
+        -webkit-box-shadow:0px 3px 7px #bfbfbf;
+        -moz-box-shadow:0px 3px 7px #bfbfbf;
+        box-shadow:0px 3px 7px #bfbfbf;
+
     }
+
 }
 
 .header.header-sticky.sticky .nav-logo img.logo-dark {
@@ -6750,6 +6760,12 @@ section {
     background-color: #3B579D;
 }
 
+.hover-weixin:hover,
+.hover-weixin:focus {
+    color: #fff;
+    background-color: #2BAF1D;
+}
+
 .hover-facebook.btn-white-inverse {
     color: #fff;
     border-color: #fff;
@@ -6771,6 +6787,17 @@ section {
     color: #fff;
     border-color: #3B579D;
 }
+
+
+.hover-weixin.btn-dark-inverse:hover,
+.hover-weixin.btn-dark-inverse:focus {
+    color: #fff;
+    border-color: #2BAF1D;
+}
+
+
+
+
 
 .hover-facebook.btn-dark {
     color: #fff;
